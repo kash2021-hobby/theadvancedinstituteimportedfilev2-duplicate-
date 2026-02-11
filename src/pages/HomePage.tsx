@@ -11,7 +11,8 @@ import {
   ChevronRight,
   Download,
   Calendar,
-  CheckCircle2
+  CheckCircle2,
+  Play
 } from 'lucide-react';
 import LeadForm from '../components/LeadForm';
 import ShaderBackground from '../components/ui/shader-background';
@@ -167,6 +168,71 @@ export default function HomePage() {
       </section>
 
       <TabbedCourseSection />
+
+      <section className="py-20 md:py-24 bg-gradient-to-br from-cyan-50 to-teal-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-left mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-3">
+              Real Stories,
+            </h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-12">
+              Incredible Journeys
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-12 mb-16">
+            <div className="text-left">
+              <div className="text-6xl md:text-7xl font-bold text-gray-900 mb-2">
+                85%
+              </div>
+              <div className="h-1 w-32 bg-gradient-to-r from-cyan-400 to-teal-400 mb-4"></div>
+              <p className="text-lg text-gray-700 font-medium">Selection rate</p>
+            </div>
+
+            <div className="text-left">
+              <div className="flex items-baseline gap-2 mb-2">
+                <span className="text-6xl md:text-7xl font-bold text-gray-900">4.7</span>
+                <span className="text-3xl text-gray-600 font-medium">/5</span>
+              </div>
+              <div className="h-1 w-32 bg-gradient-to-r from-cyan-400 to-teal-400 mb-4"></div>
+              <p className="text-lg text-gray-700 font-medium">Rated by students</p>
+            </div>
+
+            <div className="text-left">
+              <div className="text-6xl md:text-7xl font-bold text-gray-900 mb-2">
+                60%+
+              </div>
+              <div className="h-1 w-32 bg-gradient-to-r from-cyan-400 to-teal-400 mb-4"></div>
+              <p className="text-lg text-gray-700 font-medium">Job placement success</p>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
+            <div className="grid lg:grid-cols-2 gap-0">
+              <div className="relative bg-gradient-to-br from-gray-100 to-gray-200 aspect-video lg:aspect-auto flex items-center justify-center group cursor-pointer">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20"></div>
+                <div className="relative z-10 bg-white rounded-full p-8 shadow-2xl group-hover:scale-110 transition-transform duration-300">
+                  <Play className="w-16 h-16 text-primary fill-primary" />
+                </div>
+              </div>
+
+              <div className="p-8 md:p-12 flex flex-col justify-center">
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+                  Ananya Borah
+                </h3>
+
+                <blockquote className="text-xl md:text-2xl font-semibold text-gray-900 mb-6 leading-relaxed">
+                  "The structured approach and weekly tests helped me qualify RRB NTPC on my first attempt with AIR 247."
+                </blockquote>
+
+                <p className="text-gray-700 leading-relaxed">
+                  After graduation, I was struggling to crack government exams on my own. The personalized mentoring and doubt-clearing sessions here made all the difference. The faculty's experience in exam patterns and time management techniques were invaluable. Within 8 months of joining, I cleared RRB NTPC with an All India Rank of 247 and secured my dream job with Indian Railways.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="py-20 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
