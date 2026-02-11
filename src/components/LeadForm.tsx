@@ -6,13 +6,15 @@ interface LeadFormProps {
   showMessage?: boolean;
   buttonText?: string;
   buttonClass?: string;
+  onSuccess?: () => void;
 }
 
 export default function LeadForm({
   sourcePage,
   showMessage = false,
   buttonText = 'Submit',
-  buttonClass = 'w-full bg-primary text-white py-3 rounded-lg font-medium hover:bg-[#004BB8] transition-colors'
+  buttonClass = 'w-full bg-primary text-white py-3 rounded-lg font-medium hover:bg-[#004BB8] transition-colors',
+  onSuccess
 }: LeadFormProps) {
   const [formData, setFormData] = useState({
     fullName: '',
@@ -49,6 +51,12 @@ export default function LeadForm({
         examInterest: '',
         message: '',
       });
+
+      if (onSuccess) {
+        setTimeout(() => {
+          onSuccess();
+        }, 1500);
+      }
     } catch (error) {
       console.error('Error submitting form:', error);
       setSubmitStatus('error');
