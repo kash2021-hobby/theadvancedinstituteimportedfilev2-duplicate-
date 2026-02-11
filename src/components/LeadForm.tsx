@@ -100,7 +100,7 @@ export default function LeadForm({
         />
       </div>
 
-      <div className="relative z-10">
+      <div className="relative z-[100]">
         <select
           required
           value={formData.examInterest}
