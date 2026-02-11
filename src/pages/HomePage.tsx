@@ -92,15 +92,16 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="relative z-20">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img
-                  src="https://images.pexels.com/photos/5212317/pexels-photo-5212317.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="Confident student preparing for government exams"
-                  className="w-full h-full object-cover rounded-2xl"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-2xl"></div>
-              </div>
+            <div className="relative z-20 flex items-center justify-center">
+              <img
+                src="https://images.pexels.com/photos/5212317/pexels-photo-5212317.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Confident student preparing for government exams"
+                className="w-full h-auto object-contain drop-shadow-2xl"
+                style={{
+                  filter: 'drop-shadow(0 25px 50px rgba(0,0,0,0.3))',
+                  mixBlendMode: 'multiply'
+                }}
+              />
             </div>
           </div>
         </div>
