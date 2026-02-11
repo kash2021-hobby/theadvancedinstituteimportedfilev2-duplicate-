@@ -100,12 +100,12 @@ export default function LeadForm({
         />
       </div>
 
-      <div>
+      <div className="relative z-10">
         <select
           required
           value={formData.examInterest}
           onChange={(e) => setFormData({ ...formData, examInterest: e.target.value })}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white"
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white appearance-none cursor-pointer"
         >
           <option value="">Select Exam Interest *</option>
           {examOptions.map((exam) => (
