@@ -90,7 +90,7 @@ export default function HomePage() {
 
   return (
     <div>
-      <section className="relative bg-gradient-to-br from-primary via-primary-dark to-blue-900 text-white py-12 md:py-20 overflow-visible">
+      <section className="relative bg-gradient-to-br from-primary via-primary-light to-blue-400 text-white py-16 md:py-24 overflow-visible">
         <div className="absolute inset-0 overflow-hidden">
           <ShaderBackground />
         </div>
@@ -100,10 +100,10 @@ export default function HomePage() {
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
                 Crack Govt Exams in Guwahati with Expert-Led Coaching
               </h1>
-              <p className="text-xl md:text-2xl text-blue-100 font-medium">
+              <p className="text-xl md:text-2xl text-white/95 font-medium">
                 RRB NTPC | SSC CGL | SSC CHSL | Banking Exams
               </p>
-              <p className="text-lg text-blue-50">
+              <p className="text-lg text-white/90">
                 Structured classroom programs with small batch size, weekly tests and personalized mentoring.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -118,8 +118,9 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl shadow-2xl p-6 md:p-8 relative z-20 overflow-visible">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Get Started Today</h3>
+            <div className="bg-white rounded-2xl shadow-2xl p-6 md:p-8 relative z-20 overflow-visible backdrop-blur-sm border border-white/20">
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">Get Started Today</h3>
+              <p className="text-gray-600 mb-6">Fill the form and we'll contact you within 24 hours</p>
               <LeadForm
                 sourcePage="home-hero"
                 buttonText="Request Callback"
@@ -129,28 +130,64 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-6 bg-gray-50 border-y border-gray-200">
+      <section className="py-8 bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-8">
-            <div className="flex items-center justify-center space-x-2 text-center">
-              <Users className="w-5 h-5 text-primary flex-shrink-0" />
-              <span className="text-sm md:text-base font-medium text-gray-700">Small Batch (Max 20)</span>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-8">
+            <div className="flex flex-col items-center justify-center text-center p-4 rounded-xl hover:bg-gray-50 transition-colors">
+              <Users className="w-6 h-6 text-primary mb-2" />
+              <span className="text-sm md:text-base font-semibold text-gray-900">Small Batches</span>
+              <span className="text-xs text-gray-600">Max 20 Students</span>
             </div>
-            <div className="flex items-center justify-center space-x-2 text-center">
-              <BookOpen className="w-5 h-5 text-primary flex-shrink-0" />
-              <span className="text-sm md:text-base font-medium text-gray-700">Printed + PDF Material</span>
+            <div className="flex flex-col items-center justify-center text-center p-4 rounded-xl hover:bg-gray-50 transition-colors">
+              <BookOpen className="w-6 h-6 text-primary mb-2" />
+              <span className="text-sm md:text-base font-semibold text-gray-900">Study Material</span>
+              <span className="text-xs text-gray-600">Print + Digital</span>
             </div>
-            <div className="flex items-center justify-center space-x-2 text-center">
-              <ClipboardCheck className="w-5 h-5 text-primary flex-shrink-0" />
-              <span className="text-sm md:text-base font-medium text-gray-700">Full Length Mocks</span>
+            <div className="flex flex-col items-center justify-center text-center p-4 rounded-xl hover:bg-gray-50 transition-colors">
+              <ClipboardCheck className="w-6 h-6 text-primary mb-2" />
+              <span className="text-sm md:text-base font-semibold text-gray-900">Mock Tests</span>
+              <span className="text-xs text-gray-600">Full Length</span>
             </div>
-            <div className="flex items-center justify-center space-x-2 text-center">
-              <UserCheck className="w-5 h-5 text-primary flex-shrink-0" />
-              <span className="text-sm md:text-base font-medium text-gray-700">Personal Mentoring</span>
+            <div className="flex flex-col items-center justify-center text-center p-4 rounded-xl hover:bg-gray-50 transition-colors">
+              <UserCheck className="w-6 h-6 text-primary mb-2" />
+              <span className="text-sm md:text-base font-semibold text-gray-900">Mentoring</span>
+              <span className="text-xs text-gray-600">Personalized</span>
             </div>
-            <div className="flex items-center justify-center space-x-2 text-center col-span-2 md:col-span-1">
-              <MapPin className="w-5 h-5 text-primary flex-shrink-0" />
-              <span className="text-sm md:text-base font-medium text-gray-700">Located in Guwahati</span>
+            <div className="flex flex-col items-center justify-center text-center p-4 rounded-xl hover:bg-gray-50 transition-colors col-span-2 md:col-span-1">
+              <MapPin className="w-6 h-6 text-primary mb-2" />
+              <span className="text-sm md:text-base font-semibold text-gray-900">Guwahati</span>
+              <span className="text-xs text-gray-600">Prime Location</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-20 bg-gradient-to-br from-primary/5 to-blue-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Our Success in Numbers
+            </h2>
+            <p className="text-lg text-gray-600">
+              Join thousands of successful students
+            </p>
+          </div>
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">2000+</div>
+              <div className="text-gray-600 font-medium">Students Trained</div>
+            </div>
+            <div className="text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">95%</div>
+              <div className="text-gray-600 font-medium">Success Rate</div>
+            </div>
+            <div className="text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">15+</div>
+              <div className="text-gray-600 font-medium">Years Experience</div>
+            </div>
+            <div className="text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">500+</div>
+              <div className="text-gray-600 font-medium">Government Jobs</div>
             </div>
           </div>
         </div>
@@ -167,29 +204,39 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {courses.map((course) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            {courses.map((course, index) => (
               <div
                 key={course.slug}
-                className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-primary hover:shadow-lg transition-all"
+                className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-1 group"
               >
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{course.name}</h3>
-                <div className="space-y-2 mb-6">
-                  <div className="flex items-center text-gray-600">
-                    <Clock className="w-4 h-4 mr-2 text-primary" />
-                    <span className="text-sm">{course.duration}</span>
-                  </div>
-                  <div className="flex items-center text-gray-600">
-                    <MapPin className="w-4 h-4 mr-2 text-primary" />
-                    <span className="text-sm">{course.mode}</span>
-                  </div>
+                <div className="h-48 bg-gradient-to-br from-primary/80 to-blue-500 flex items-center justify-center relative overflow-hidden">
+                  <BookOpen className="w-20 h-20 text-white/90 group-hover:scale-110 transition-transform" />
+                  {index === 0 && (
+                    <div className="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-xs font-semibold">
+                      Popular
+                    </div>
+                  )}
                 </div>
-                <Link
-                  to={`/courses/${course.slug}`}
-                  className="block w-full text-center bg-primary text-white py-3 rounded-lg font-medium hover:bg-primary-dark transition-colors"
-                >
-                  View Details
-                </Link>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">{course.name}</h3>
+                  <div className="space-y-3 mb-6">
+                    <div className="flex items-center text-gray-600">
+                      <Clock className="w-5 h-5 mr-3 text-primary" />
+                      <span className="text-sm font-medium">{course.duration}</span>
+                    </div>
+                    <div className="flex items-center text-gray-600">
+                      <MapPin className="w-5 h-5 mr-3 text-primary" />
+                      <span className="text-sm font-medium">{course.mode}</span>
+                    </div>
+                  </div>
+                  <Link
+                    to={`/courses/${course.slug}`}
+                    className="block w-full text-center bg-primary text-white py-3 rounded-xl font-semibold hover:bg-primary-dark transition-all shadow-md hover:shadow-lg"
+                  >
+                    View Details
+                  </Link>
+                </div>
               </div>
             ))}
           </div>
@@ -206,13 +253,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-gray-50">
+      <section className="py-20 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why Choose Us
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               What makes us the best choice for your government exam preparation
             </p>
           </div>
@@ -223,12 +270,15 @@ export default function HomePage() {
               return (
                 <div
                   key={index}
-                  className="flex items-start space-x-4 p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow"
+                  className="relative group"
                 >
-                  <div className="bg-primary/10 p-3 rounded-lg flex-shrink-0">
-                    <Icon className="w-6 h-6 text-primary" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-blue-100 rounded-2xl transform group-hover:scale-105 transition-transform"></div>
+                  <div className="relative bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+                    <div className="bg-gradient-to-br from-primary to-primary-dark p-4 rounded-xl inline-block mb-4">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <p className="text-gray-800 font-semibold text-lg leading-relaxed">{item.text}</p>
                   </div>
-                  <p className="text-gray-700 font-medium pt-2">{item.text}</p>
                 </div>
               );
             })}
@@ -236,25 +286,28 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-20 md:py-24 bg-gradient-to-br from-blue-50 to-primary/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               How Our Program Works
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               A structured approach to ensure your success
             </p>
           </div>
 
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             {programSteps.map((step, index) => (
-              <div key={index} className="flex items-start mb-6 last:mb-0">
-                <div className="flex-shrink-0 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold mr-4">
+              <div key={index} className="flex items-start mb-8 last:mb-0 relative">
+                {index < programSteps.length - 1 && (
+                  <div className="absolute left-6 top-14 bottom-0 w-0.5 bg-gradient-to-b from-primary to-primary-light"></div>
+                )}
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary to-primary-dark text-white rounded-full flex items-center justify-center font-bold text-lg shadow-lg z-10 mr-6">
                   {index + 1}
                 </div>
-                <div className="flex-grow bg-gray-50 p-4 rounded-lg">
-                  <p className="text-gray-800 font-medium">{step}</p>
+                <div className="flex-grow bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-shadow border border-gray-100">
+                  <p className="text-gray-900 font-semibold text-lg">{step}</p>
                 </div>
               </div>
             ))}
@@ -262,38 +315,47 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-gray-50">
+      <section className="py-20 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Our Student Success Stories
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Join hundreds of successful students who cracked their exams with us
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                <div className="h-48 bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center">
-                  <Award className="w-16 h-16 text-white" />
+            {[
+              { name: "Rahul Sharma", exam: "SSC CGL 2023", status: "Selected", score: "Tier 1: 168/200" },
+              { name: "Priya Devi", exam: "RRB NTPC 2023", status: "Selected", score: "CBT 1: 96/100" },
+              { name: "Amit Kumar", exam: "Banking PO", status: "Selected", score: "Prelims: 82/100" }
+            ].map((student, i) => (
+              <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-2 border border-gray-100">
+                <div className="h-56 bg-gradient-to-br from-primary via-primary-light to-blue-400 flex items-center justify-center relative overflow-hidden">
+                  <div className="absolute inset-0 bg-white/5"></div>
+                  <Award className="w-20 h-20 text-white relative z-10" />
+                  <div className="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                    Selected
+                  </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="font-bold text-xl text-gray-900 mb-2">Student Name</h3>
-                  <p className="text-primary font-semibold mb-2">SSC CGL 2023 - Selected</p>
-                  <p className="text-gray-600 text-sm">
-                    "The faculty and study material provided here helped me crack SSC CGL in my first attempt."
+                  <h3 className="font-bold text-xl text-gray-900 mb-1">{student.name}</h3>
+                  <p className="text-primary font-semibold mb-2">{student.exam}</p>
+                  <p className="text-sm text-gray-600 font-medium mb-4">{student.score}</p>
+                  <p className="text-gray-700 text-sm leading-relaxed italic">
+                    "The faculty and study material provided here helped me crack the exam in my first attempt."
                   </p>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="text-center mt-10">
+          <div className="text-center mt-12">
             <Link
               to="/results"
-              className="inline-flex items-center space-x-2 text-primary font-semibold hover:text-primary-dark"
+              className="inline-flex items-center space-x-2 text-primary font-semibold text-lg hover:text-primary-dark transition-colors"
             >
               <span>View All Success Stories</span>
               <ChevronRight className="w-5 h-5" />
@@ -302,48 +364,50 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-primary text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Start Your Preparation the Right Way
-          </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Attend a Free Demo Class This Week
-          </p>
-          <button className="bg-secondary text-white px-10 py-4 rounded-lg font-semibold hover:bg-secondary-dark transition-all hover:shadow-lg text-lg">
-            Register Now
-          </button>
+      <section className="py-20 md:py-24 bg-gradient-to-br from-primary/10 via-blue-50 to-primary/5">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 text-center border border-primary/10">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+              Start Your Preparation the Right Way
+            </h2>
+            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+              Attend a Free Demo Class This Week and experience our teaching methodology
+            </p>
+            <button className="bg-gradient-to-r from-primary to-primary-dark text-white px-12 py-5 rounded-xl font-semibold hover:shadow-xl transition-all text-lg transform hover:-translate-y-1">
+              Register for Free Demo
+            </button>
+          </div>
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-20 md:py-24 bg-gradient-to-br from-blue-50 to-primary/5">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Frequently Asked Questions
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Everything you need to know about our programs
             </p>
           </div>
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div key={index} className="border border-gray-200 rounded-lg overflow-hidden">
+              <div key={index} className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                 <button
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                  className="w-full px-6 py-4 text-left bg-white hover:bg-gray-50 transition-colors flex justify-between items-center"
+                  className="w-full px-6 py-5 text-left hover:bg-gray-50 transition-colors flex justify-between items-center"
                 >
-                  <span className="font-semibold text-gray-900">{faq.question}</span>
+                  <span className="font-semibold text-gray-900 text-lg">{faq.question}</span>
                   <ChevronRight
-                    className={`w-5 h-5 text-gray-500 transition-transform ${
+                    className={`w-5 h-5 text-primary transition-transform flex-shrink-0 ml-4 ${
                       openFaq === index ? 'rotate-90' : ''
                     }`}
                   />
                 </button>
                 {openFaq === index && (
-                  <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
-                    <p className="text-gray-700">{faq.answer}</p>
+                  <div className="px-6 py-5 bg-primary/5 border-t border-gray-200">
+                    <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
                   </div>
                 )}
               </div>
@@ -352,13 +416,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-primary">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-2 text-center">
+      <section className="py-20 md:py-24 bg-gradient-to-br from-primary via-primary-light to-blue-400 relative overflow-hidden">
+        <div className="absolute inset-0 bg-white/5"></div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 border border-white/20 backdrop-blur-sm">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3 text-center">
               Get Admission Details
             </h2>
-            <p className="text-gray-600 mb-8 text-center">
+            <p className="text-gray-600 mb-8 text-center text-lg">
               Fill out the form and our team will contact you within 24 hours
             </p>
             <LeadForm
