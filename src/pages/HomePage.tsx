@@ -15,6 +15,7 @@ import {
   CheckCircle2
 } from 'lucide-react';
 import LeadForm from '../components/LeadForm';
+import ShaderBackground from '../components/ui/shader-background';
 import { useState } from 'react';
 
 export default function HomePage() {
@@ -89,8 +90,9 @@ export default function HomePage() {
 
   return (
     <div>
-      <section className="relative bg-gradient-to-br from-primary via-primary-dark to-blue-900 text-white py-12 md:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-gradient-to-br from-primary via-primary-dark to-blue-900 text-white py-12 md:py-20 overflow-hidden">
+        <ShaderBackground />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="space-y-6">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
