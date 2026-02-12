@@ -10,7 +10,8 @@ import {
   Award,
   ChevronRight,
   CheckCircle2,
-  Play
+  Play,
+  GraduationCap
 } from 'lucide-react';
 import LeadForm from '../components/LeadForm';
 import ShaderBackground from '../components/ui/shader-background';
@@ -271,45 +272,66 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Student Success Stories
+              Our Expert Faculty
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Join hundreds of successful students who cracked their exams with us
+              Learn from experienced professionals who are dedicated to your success
             </p>
           </div>
 
           <div ref={successStoriesAnimation.ref} style={successStoriesAnimation.style} className="grid md:grid-cols-3 gap-8">
             {[
-              { name: "Rahul Sharma", exam: "SSC CGL 2023", status: "Selected", score: "Tier 1: 168/200" },
-              { name: "Priya Devi", exam: "RRB NTPC 2023", status: "Selected", score: "CBT 1: 96/100" },
-              { name: "Amit Kumar", exam: "Banking PO", status: "Selected", score: "Prelims: 82/100" }
-            ].map((student, i) => (
-              <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-2 border border-gray-100">
-                <div className="h-56 bg-gradient-to-br from-primary to-secondary flex items-center justify-center relative overflow-hidden">
-                  <div className="absolute inset-0 bg-white/5"></div>
-                  <Award className="w-20 h-20 text-white relative z-10" />
-                  <div className="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                    Selected
+              { 
+                name: "Dr. Rajesh Kumar", 
+                qualification: "Ph.D. in Mathematics", 
+                experience: "15+ Years", 
+                specialization: "Quantitative Aptitude & Reasoning",
+                icon: GraduationCap
+              },
+              { 
+                name: "Prof. Anita Sharma", 
+                qualification: "M.A. English Literature", 
+                experience: "12+ Years", 
+                specialization: "English & General Awareness",
+                icon: BookOpen
+              },
+              { 
+                name: "Mr. Vikram Singh", 
+                qualification: "Ex-Railway Officer", 
+                experience: "10+ Years", 
+                specialization: "RRB & Technical Subjects",
+                icon: Award
+              }
+            ].map((faculty, i) => {
+              const Icon = faculty.icon;
+              return (
+                <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-2 border border-gray-100">
+                  <div className="h-56 bg-gradient-to-br from-primary to-secondary flex items-center justify-center relative overflow-hidden">
+                    <div className="absolute inset-0 bg-white/5"></div>
+                    <Icon className="w-20 h-20 text-white relative z-10" />
+                    <div className="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                      {faculty.experience}
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-bold text-xl text-gray-900 mb-1">{faculty.name}</h3>
+                    <p className="text-primary font-semibold mb-2">{faculty.qualification}</p>
+                    <p className="text-sm text-gray-600 font-medium mb-4">Specialization:</p>
+                    <p className="text-gray-700 text-sm leading-relaxed">
+                      {faculty.specialization}
+                    </p>
                   </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="font-bold text-xl text-gray-900 mb-1">{student.name}</h3>
-                  <p className="text-primary font-semibold mb-2">{student.exam}</p>
-                  <p className="text-sm text-gray-600 font-medium mb-4">{student.score}</p>
-                  <p className="text-gray-700 text-sm leading-relaxed italic">
-                    "The faculty and study material provided here helped me crack the exam in my first attempt."
-                  </p>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           <div className="text-center mt-12">
             <Link
-              to="/results"
+              to="/about"
               className="inline-flex items-center space-x-2 text-primary font-semibold text-lg hover:text-[#004BB8] transition-colors"
             >
-              <span>View All Success Stories</span>
+              <span>Meet All Our Faculty</span>
               <ChevronRight className="w-5 h-5" />
             </Link>
           </div>
