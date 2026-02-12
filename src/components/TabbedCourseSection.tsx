@@ -9,6 +9,7 @@ interface Course {
   cohortStart: string;
   slug: string;
   category: string;
+  logo?: string;
 }
 
 const courses: Course[] = [
@@ -17,7 +18,8 @@ const courses: Course[] = [
     duration: '6 Months',
     cohortStart: '1st March 2026',
     slug: 'rrb-ntpc',
-    category: 'RRB'
+    category: 'RRB',
+    logo: '/indian-railways-logo.png'
   },
   {
     name: 'SSC CGL',
@@ -103,11 +105,21 @@ export default function TabbedCourseSection() {
                   <div className="h-48 bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center relative overflow-hidden">
                     <div className="absolute inset-0 bg-black/10"></div>
                     <div className="relative text-center px-6">
-                      <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span className="text-2xl font-bold text-blue-600">
-                          {course.category.charAt(0)}
-                        </span>
-                      </div>
+                      {course.logo ? (
+                        <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto mb-4 p-2">
+                          <img 
+                            src={course.logo} 
+                            alt={`${course.name} logo`}
+                            className="w-full h-full object-contain"
+                          />
+                        </div>
+                      ) : (
+                        <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
+                          <span className="text-2xl font-bold text-blue-600">
+                            {course.category.charAt(0)}
+                          </span>
+                        </div>
+                      )}
                       <h3 className="text-2xl font-bold text-white">
                         {course.name}
                       </h3>
