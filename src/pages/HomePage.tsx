@@ -11,7 +11,8 @@ import {
   ChevronRight,
   CheckCircle2,
   Play,
-  GraduationCap
+  GraduationCap,
+  X
 } from 'lucide-react';
 import LeadForm from '../components/LeadForm';
 import ShaderBackground from '../components/ui/shader-background';
@@ -22,6 +23,7 @@ import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 export default function HomePage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [selectedFaculty, setSelectedFaculty] = useState<number | null>(null);
 
   const statsAnimation = useScrollAnimation({ direction: 'left', delay: 100 });
   const testimonialsAnimation = useScrollAnimation({ direction: 'right', delay: 100 });
@@ -143,40 +145,30 @@ export default function HomePage() {
 
       <section className="py-20 md:py-24" style={{ backgroundColor: '#ECFFFA' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div ref={testimonialsAnimation.ref} style={testimonialsAnimation.style} className="text-left mb-12">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-3">
-              Real Stories,
+          <div ref={testimonialsAnimation.ref} style={testimonialsAnimation.style} className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why Choose The Advanced Learning Academy
             </h2>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-12">
-              Incredible Journeys
-            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Discover what makes us the preferred choice for government exam preparation
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-12 mb-16">
-            <div className="text-left">
-              <div className="text-6xl md:text-7xl font-bold text-gray-900 mb-2">
-                85%
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {[
+              { icon: '👥', title: 'Small Batch Sizes', desc: 'Maximum 20 students per batch for personalized attention' },
+              { icon: '🎓', title: 'Experienced Faculty', desc: '15+ years of expertise in government exam coaching' },
+              { icon: '📚', title: 'Comprehensive Study Material', desc: 'Print + Digital resources with regular updates' },
+              { icon: '✅', title: 'Regular Mock Tests', desc: 'Weekly tests and All India ranking system' },
+              { icon: '💬', title: 'Daily Doubt Clearing', desc: 'Dedicated doubt sessions and personal mentoring' },
+              { icon: '📍', title: 'Prime Location', desc: 'Conveniently located in the heart of Guwahati' }
+            ].map((item, index) => (
+              <div key={index} className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 border border-gray-100">
+                <div className="text-4xl mb-4">{item.icon}</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{item.desc}</p>
               </div>
-              <div className="h-1 w-32 bg-gradient-to-r from-cyan-400 to-teal-400 mb-4"></div>
-              <p className="text-lg text-gray-700 font-medium">Selection rate</p>
-            </div>
-
-            <div className="text-left">
-              <div className="flex items-baseline gap-2 mb-2">
-                <span className="text-6xl md:text-7xl font-bold text-gray-900">4.7</span>
-                <span className="text-3xl text-gray-600 font-medium">/5</span>
-              </div>
-              <div className="h-1 w-32 bg-gradient-to-r from-cyan-400 to-teal-400 mb-4"></div>
-              <p className="text-lg text-gray-700 font-medium">Rated by students</p>
-            </div>
-
-            <div className="text-left">
-              <div className="text-6xl md:text-7xl font-bold text-gray-900 mb-2">
-                60%+
-              </div>
-              <div className="h-1 w-32 bg-gradient-to-r from-cyan-400 to-teal-400 mb-4"></div>
-              <p className="text-lg text-gray-700 font-medium">Job placement success</p>
-            </div>
+            ))}
           </div>
 
           <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
@@ -189,12 +181,12 @@ export default function HomePage() {
               </div>
 
               <div className="p-8 md:p-12 flex flex-col justify-center">
-                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
-                  Ananya Borah
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+                  Hear from Our Founder
                 </h3>
 
                 <blockquote className="text-xl md:text-2xl font-semibold text-gray-900 mb-6 leading-relaxed">
-                  "The structured approach and weekly tests helped me qualify RRB NTPC on my first attempt with AIR 247."
+                  "Welcome to The Advanced Learning Academy - where we transform your government job dreams into reality through expert guidance and proven strategies."
                 </blockquote>
 
                 <p className="text-gray-700 leading-relaxed">
@@ -286,25 +278,46 @@ export default function HomePage() {
                 qualification: "Ph.D. in Mathematics", 
                 experience: "15+ Years", 
                 specialization: "Quantitative Aptitude & Reasoning",
-                image: "/faculty-1.jpg"
+                image: "/faculty-1.jpg",
+                fullQualifications: "Ph.D. in Mathematics, NET Qualified",
+                university: "Gauhati University",
+                subjects: ["Quantitative Aptitude", "Logical Reasoning", "Data Interpretation"],
+                exams: ["SSC CGL", "SSC CHSL", "RRB NTPC", "Banking"],
+                achievement: "Trained 500+ students with 200+ selections in SSC & RRB exams",
+                teachingApproach: "Focuses on concept clarity and shortcut techniques for complex calculations",
+                quote: "Mathematics is not about numbers, it's about understanding patterns and logic"
               },
               { 
                 name: "Prof. Anita Sharma", 
                 qualification: "M.A. English Literature", 
                 experience: "12+ Years", 
                 specialization: "English & General Awareness",
-                image: "/faculty-2.jpg"
+                image: "/faculty-2.jpg",
+                fullQualifications: "M.A. in English Literature, B.Ed.",
+                university: "Delhi University",
+                subjects: ["English Language", "Comprehension", "General Awareness", "Current Affairs"],
+                exams: ["SSC CGL", "SSC CHSL", "Banking", "All Government Exams"],
+                achievement: "Expert in English language with 300+ successful students",
+                teachingApproach: "Interactive teaching methodology with focus on practical application",
+                quote: "Language is power - master it to unlock countless opportunities"
               },
               { 
                 name: "Mr. Vikram Singh", 
                 qualification: "Ex-Railway Officer", 
                 experience: "10+ Years", 
                 specialization: "RRB & Technical Subjects",
-                image: "/faculty-3.jpg"
+                image: "/faculty-3.jpg",
+                fullQualifications: "B.Tech (Mechanical), Ex-Railway Technical Officer",
+                university: "IIT Roorkee",
+                subjects: ["RRB Technical", "General Science", "Railway Procedures", "Technical Aptitude"],
+                exams: ["RRB NTPC", "RRB Group D", "RRB Technician", "RRB ALP"],
+                achievement: "Former Railway officer with insider knowledge of railway recruitment",
+                teachingApproach: "Practical approach with real railway exam insights and patterns",
+                quote: "Success in railway exams comes from understanding the system from within"
               }
             ].map((faculty, i) => {
               return (
-                <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-2 border border-gray-100">
+                <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-2 border border-gray-100 cursor-pointer" onClick={() => setSelectedFaculty(i)}>
                   <div className="h-56 bg-gradient-to-br from-primary to-secondary flex items-center justify-center relative overflow-hidden">
                     <img 
                       src={faculty.image} 
@@ -318,10 +331,13 @@ export default function HomePage() {
                   <div className="p-6">
                     <h3 className="font-bold text-xl text-gray-900 mb-1">{faculty.name}</h3>
                     <p className="text-primary font-semibold mb-2">{faculty.qualification}</p>
-                    <p className="text-sm text-gray-600 font-medium mb-4">Specialization:</p>
-                    <p className="text-gray-700 text-sm leading-relaxed">
+                    <p className="text-sm text-gray-600 font-medium mb-2">Specialization:</p>
+                    <p className="text-gray-700 text-sm leading-relaxed mb-4">
                       {faculty.specialization}
                     </p>
+                    <button className="w-full bg-primary text-white py-2 rounded-lg font-semibold hover:bg-primary-dark transition-all text-sm">
+                      View Full Profile
+                    </button>
                   </div>
                 </div>
               );
@@ -427,6 +443,151 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Faculty Modal */}
+      {selectedFaculty !== null && (
+        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 backdrop-blur-sm" onClick={() => setSelectedFaculty(null)}>
+          <div className="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl" onClick={(e) => e.stopPropagation()}>
+            {(() => {
+              const facultyData = [
+                { 
+                  name: "Dr. Rajesh Kumar", 
+                  qualification: "Ph.D. in Mathematics", 
+                  experience: "15+ Years", 
+                  specialization: "Quantitative Aptitude & Reasoning",
+                  image: "/faculty-1.jpg",
+                  fullQualifications: "Ph.D. in Mathematics, NET Qualified",
+                  university: "Gauhati University",
+                  subjects: ["Quantitative Aptitude", "Logical Reasoning", "Data Interpretation"],
+                  exams: ["SSC CGL", "SSC CHSL", "RRB NTPC", "Banking"],
+                  achievement: "Trained 500+ students with 200+ selections in SSC & RRB exams",
+                  teachingApproach: "Focuses on concept clarity and shortcut techniques for complex calculations",
+                  quote: "Mathematics is not about numbers, it's about understanding patterns and logic"
+                },
+                { 
+                  name: "Prof. Anita Sharma", 
+                  qualification: "M.A. English Literature", 
+                  experience: "12+ Years", 
+                  specialization: "English & General Awareness",
+                  image: "/faculty-2.jpg",
+                  fullQualifications: "M.A. in English Literature, B.Ed.",
+                  university: "Delhi University",
+                  subjects: ["English Language", "Comprehension", "General Awareness", "Current Affairs"],
+                  exams: ["SSC CGL", "SSC CHSL", "Banking", "All Government Exams"],
+                  achievement: "Expert in English language with 300+ successful students",
+                  teachingApproach: "Interactive teaching methodology with focus on practical application",
+                  quote: "Language is power - master it to unlock countless opportunities"
+                },
+                { 
+                  name: "Mr. Vikram Singh", 
+                  qualification: "Ex-Railway Officer", 
+                  experience: "10+ Years", 
+                  specialization: "RRB & Technical Subjects",
+                  image: "/faculty-3.jpg",
+                  fullQualifications: "B.Tech (Mechanical), Ex-Railway Technical Officer",
+                  university: "IIT Roorkee",
+                  subjects: ["RRB Technical", "General Science", "Railway Procedures", "Technical Aptitude"],
+                  exams: ["RRB NTPC", "RRB Group D", "RRB Technician", "RRB ALP"],
+                  achievement: "Former Railway officer with insider knowledge of railway recruitment",
+                  teachingApproach: "Practical approach with real railway exam insights and patterns",
+                  quote: "Success in railway exams comes from understanding the system from within"
+                }
+              ];
+              const faculty = facultyData[selectedFaculty];
+              
+              return (
+                <>
+                  <button 
+                    onClick={() => setSelectedFaculty(null)}
+                    className="absolute top-4 right-4 bg-gray-100 hover:bg-gray-200 rounded-full p-2 transition-colors z-10"
+                  >
+                    <X className="w-6 h-6 text-gray-600" />
+                  </button>
+                  
+                  <div className="grid md:grid-cols-5 gap-0">
+                    <div className="md:col-span-2 relative">
+                      <div className="h-64 md:h-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center relative overflow-hidden">
+                        <img 
+                          src={faculty.image} 
+                          alt={faculty.name}
+                          className="w-full h-full object-cover"
+                        />
+                        <div className="absolute top-4 left-4 bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                          {faculty.experience}
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="md:col-span-3 p-8 md:p-10">
+                      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">{faculty.name}</h2>
+                      <p className="text-xl text-primary font-semibold mb-6">{faculty.qualification}</p>
+                      
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="text-lg font-bold text-gray-900 mb-2 flex items-center">
+                            <GraduationCap className="w-5 h-5 mr-2 text-primary" />
+                            Qualifications
+                          </h3>
+                          <p className="text-gray-700">{faculty.fullQualifications}</p>
+                          <p className="text-gray-600 text-sm mt-1">{faculty.university}</p>
+                        </div>
+
+                        <div>
+                          <h3 className="text-lg font-bold text-gray-900 mb-2 flex items-center">
+                            <BookOpen className="w-5 h-5 mr-2 text-primary" />
+                            Subjects Taught
+                          </h3>
+                          <div className="flex flex-wrap gap-2">
+                            {faculty.subjects.map((subject: string, idx: number) => (
+                              <span key={idx} className="bg-blue-100 text-primary px-3 py-1 rounded-full text-sm font-medium">
+                                {subject}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+
+                        <div>
+                          <h3 className="text-lg font-bold text-gray-900 mb-2 flex items-center">
+                            <Target className="w-5 h-5 mr-2 text-primary" />
+                            Exams Specialized
+                          </h3>
+                          <div className="flex flex-wrap gap-2">
+                            {faculty.exams.map((exam: string, idx: number) => (
+                              <span key={idx} className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">
+                                {exam}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+
+                        <div>
+                          <h3 className="text-lg font-bold text-gray-900 mb-2 flex items-center">
+                            <Award className="w-5 h-5 mr-2 text-primary" />
+                            Key Achievements
+                          </h3>
+                          <p className="text-gray-700">{faculty.achievement}</p>
+                        </div>
+
+                        <div>
+                          <h3 className="text-lg font-bold text-gray-900 mb-2 flex items-center">
+                            <CheckCircle2 className="w-5 h-5 mr-2 text-primary" />
+                            Teaching Approach
+                          </h3>
+                          <p className="text-gray-700">{faculty.teachingApproach}</p>
+                        </div>
+
+                        <div className="bg-blue-50 p-4 rounded-xl border-l-4 border-primary">
+                          <p className="text-gray-800 italic">"{faculty.quote}"</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </>
+              );
+            })()}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
