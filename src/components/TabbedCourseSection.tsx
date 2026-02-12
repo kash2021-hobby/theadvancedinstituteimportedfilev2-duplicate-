@@ -30,7 +30,7 @@ const courses: Course[] = [
     slug: 'ssc-cgl',
     category: 'SSC',
     logo: '/ssc-logo.png',
-    backgroundImage: '/ssc-office-background.jpg'
+    backgroundImage: '/ssc-headquarters.jpg'
   },
   {
     name: 'SSC CHSL',
