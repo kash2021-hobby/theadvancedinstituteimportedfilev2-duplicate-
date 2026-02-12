@@ -80,59 +80,59 @@ export default function HeroSlider() {
 
   return (
     <section 
-      className="relative bg-white overflow-hidden"
+      className="relative bg-white overflow-hidden min-h-[100vh] sm:min-h-[600px]"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      {/* Mobile-First Layout */}
-      <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col lg:flex-row lg:items-center lg:min-h-[600px]">
-          
-          {/* Image Section - Top on mobile, Right on desktop */}
-          <div className="w-full lg:w-1/2 lg:order-2">
-            <div 
-              key={`image-${slide.id}`}
-              className="relative h-[400px] lg:h-[600px] animate-fadeIn"
-            >
-              <img
-                src={slide.personImage}
-                alt="Hero"
-                className="w-full h-full object-cover object-center"
-              />
-              {/* Subtle overlay for better image quality */}
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/20 lg:bg-gradient-to-r lg:from-white/30 lg:to-transparent"></div>
-            </div>
+      {/* Full Container */}
+      <div className="relative h-full min-h-[100vh] sm:min-h-[600px]">
+        
+        {/* Image - Full width on mobile, half on desktop */}
+        <div className="absolute inset-0 lg:right-0 lg:left-auto lg:w-1/2">
+          <div 
+            key={`image-${slide.id}`}
+            className="relative h-full animate-fadeIn"
+          >
+            <img
+              src={slide.personImage}
+              alt="Hero"
+              className="w-full h-full object-cover object-center"
+            />
+            {/* Fade overlay on bottom half for mobile, left side for desktop */}
+            <div className="absolute inset-0 bg-gradient-to-t from-white via-white/60 to-transparent lg:bg-gradient-to-r lg:from-white lg:via-white/60 lg:to-transparent"></div>
           </div>
+        </div>
 
-          {/* Content Section - Bottom on mobile, Left on desktop */}
-          <div className="w-full lg:w-1/2 lg:order-1 px-6 py-12 lg:px-12 lg:py-16">
+        {/* Content Overlay - Positioned at bottom on mobile, left on desktop */}
+        <div className="relative z-10 h-full flex items-end lg:items-center">
+          <div className="w-full lg:w-1/2 px-6 py-12 sm:px-8 sm:py-16 lg:px-12 lg:py-20">
             <div 
               key={`content-${slide.id}`}
-              className="animate-fadeIn space-y-6"
+              className="animate-fadeIn space-y-4 sm:space-y-6"
             >
               {/* Headline */}
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                 {slide.headline}
               </h1>
 
               {/* Subheadline */}
-              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-xl">
+              <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed max-w-xl">
                 {slide.subheadline}
               </p>
 
               {/* CTA Button */}
-              <div className="pt-4">
+              <div className="pt-2 sm:pt-4 pb-6 sm:pb-8">
                 <Link
                   to={slide.ctaLink}
-                  className="inline-block w-full sm:w-auto bg-primary text-white px-12 py-4 rounded-lg text-lg font-semibold hover:bg-primary-dark transition-all duration-300 hover:shadow-xl text-center"
+                  className="inline-block w-full sm:w-auto bg-primary text-white px-10 sm:px-12 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold hover:bg-primary-dark transition-all duration-300 hover:shadow-xl text-center"
                 >
                   {slide.ctaText}
                 </Link>
               </div>
             </div>
           </div>
-
         </div>
+
       </div>
 
       {/* Navigation Arrows - Desktop only */}
@@ -153,14 +153,14 @@ export default function HeroSlider() {
       </button>
 
       {/* Dots Indicator */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex space-x-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full">
+      <div className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-20 flex space-x-2 bg-white/80 backdrop-blur-sm px-3 sm:px-4 py-2 rounded-full">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
             className={`transition-all rounded-full ${
               index === currentSlide
-                ? 'w-8 h-2 bg-primary'
+                ? 'w-6 sm:w-8 h-2 bg-primary'
                 : 'w-2 h-2 bg-gray-400 hover:bg-gray-600'
             }`}
             aria-label={`Go to slide ${index + 1}`}
