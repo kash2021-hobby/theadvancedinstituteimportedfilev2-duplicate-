@@ -27,6 +27,19 @@ interface CourseData {
     title: string;
     topics: string[];
   }[];
+  examPattern?: {
+    stage: string;
+    sections: {
+      name: string;
+      questions: number;
+      marks: number;
+    }[];
+    duration: string;
+    total: {
+      questions: number;
+      marks: number;
+    };
+  }[];
   batchTimings: {
     day: string;
     time: string;
@@ -68,6 +81,28 @@ const coursesData: Record<string, CourseData> = {
       {
         title: 'General Intelligence & Reasoning',
         topics: ['Analogies', 'Coding-Decoding', 'Blood Relations', 'Series', 'Syllogism', 'Direction Sense', 'Puzzles']
+      }
+    ],
+    examPattern: [
+      {
+        stage: 'CBT 1 (Expected)',
+        sections: [
+          { name: 'Mathematics', questions: 30, marks: 30 },
+          { name: 'General Intelligence and Reasoning', questions: 30, marks: 30 },
+          { name: 'General Awareness', questions: 40, marks: 40 }
+        ],
+        duration: '90 minutes',
+        total: { questions: 100, marks: 100 }
+      },
+      {
+        stage: 'CBT 2 (Expected)',
+        sections: [
+          { name: 'Mathematics', questions: 35, marks: 35 },
+          { name: 'General Intelligence and Reasoning', questions: 35, marks: 35 },
+          { name: 'General Awareness', questions: 50, marks: 50 }
+        ],
+        duration: '90 minutes',
+        total: { questions: 120, marks: 120 }
       }
     ],
     batchTimings: [
@@ -332,6 +367,55 @@ export default function CourseDetailPage() {
                   ))}
                 </div>
               </div>
+
+              {course.examPattern && (
+                <div>
+                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Exam Pattern</h2>
+                  <p className="text-gray-700 mb-6">
+                    The RRB NTPC 2025-26 exam will be conducted in two stages: Stage 1 (Preliminary) and Stage 2 (Main).
+                    The RRB NTPC Stage 1 and Stage 2 have the same syllabus, but the exam pattern is different.
+                  </p>
+                  <div className="space-y-8">
+                    {course.examPattern.map((pattern, index) => (
+                      <div key={index} className="bg-white border-2 border-gray-200 rounded-lg overflow-hidden">
+                        <div className="bg-primary text-white px-6 py-3">
+                          <h3 className="text-xl font-bold">
+                            RRB NTPC Exam Pattern 2025-26 {pattern.stage}
+                          </h3>
+                        </div>
+                        <div className="overflow-x-auto">
+                          <table className="w-full">
+                            <thead>
+                              <tr className="bg-orange-400 text-black">
+                                <th className="px-6 py-3 text-left font-bold border-r border-orange-500">Sections</th>
+                                <th className="px-6 py-3 text-left font-bold border-r border-orange-500">No. of Questions</th>
+                                <th className="px-6 py-3 text-left font-bold border-r border-orange-500">Total Marks</th>
+                                <th className="px-6 py-3 text-left font-bold">Duration</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              {pattern.sections.map((section, sectionIndex) => (
+                                <tr key={sectionIndex} className="border-b border-gray-200">
+                                  <td className="px-6 py-4 border-r border-gray-200">{section.name}</td>
+                                  <td className="px-6 py-4 border-r border-gray-200">{section.questions}</td>
+                                  <td className="px-6 py-4 border-r border-gray-200">{section.marks}</td>
+                                  <td className="px-6 py-4">{sectionIndex === 0 ? pattern.duration : ''}</td>
+                                </tr>
+                              ))}
+                              <tr className="bg-gray-50 font-bold">
+                                <td className="px-6 py-4 border-r border-gray-200">Total</td>
+                                <td className="px-6 py-4 border-r border-gray-200">{pattern.total.questions}</td>
+                                <td className="px-6 py-4 border-r border-gray-200">{pattern.total.marks}</td>
+                                <td className="px-6 py-4"></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Batch Timings</h2>
