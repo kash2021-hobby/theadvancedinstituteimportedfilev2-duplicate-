@@ -544,10 +544,6 @@ export default function CourseDetailPage() {
               </div>
 
               <div>
-                <CourseRoadmap curriculum={course.curriculum} duration={course.duration} />
-              </div>
-
-              <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Detailed Syllabus</h2>
                 <div className="space-y-3">
                   {course.syllabus.map((section, index) => (
@@ -635,6 +631,10 @@ export default function CourseDetailPage() {
                   </div>
                 </div>
               )}
+
+              <div>
+                <CourseRoadmap curriculum={course.curriculum} duration={course.duration} />
+              </div>
 
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Batch Timings</h2>
