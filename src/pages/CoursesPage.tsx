@@ -120,11 +120,14 @@ export default function CoursesPage() {
                     </div>
 
                     <div className="mb-6">
-                      <h3 className="font-semibold text-gray-900 mb-3">Course Highlights:</h3>
+                      <h3 className="font-semibold mb-3">
+                        <span className="text-gray-900">Course </span>
+                        <span className="text-[#004BB8]">Highlights:</span>
+                      </h3>
                       <div className="grid md:grid-cols-2 gap-2">
                         {course.highlights.map((highlight, index) => (
                           <div key={index} className="flex items-start space-x-2">
-                            <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                            <CheckCircle2 className="w-5 h-5 text-[#004BB8] flex-shrink-0 mt-0.5" />
                             <span className="text-gray-700 text-sm">{highlight}</span>
                           </div>
                         ))}

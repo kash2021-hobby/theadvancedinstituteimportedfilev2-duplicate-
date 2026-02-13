@@ -324,11 +324,14 @@ export default function CourseDetailPage() {
               </div>
 
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Course Highlights</h2>
+                <h2 className="text-3xl font-bold mb-6">
+                  <span className="text-gray-900">Course </span>
+                  <span className="text-[#004BB8]">Highlights</span>
+                </h2>
                 <div className="grid md:grid-cols-2 gap-4">
                   {course.highlights.map((highlight, index) => (
                     <div key={index} className="flex items-start space-x-3">
-                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                      <CheckCircle2 className="w-5 h-5 text-[#004BB8] flex-shrink-0 mt-1" />
                       <span className="text-gray-700">{highlight}</span>
                     </div>
                   ))}
