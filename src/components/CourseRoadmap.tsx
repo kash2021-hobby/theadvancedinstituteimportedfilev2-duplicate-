@@ -1,4 +1,4 @@
-import { BookOpen, Target, TrendingUp, Award, CheckCircle } from 'lucide-react';
+import { BookOpen, Target, TrendingUp, Award, CheckCircle, ChevronDown } from 'lucide-react';
 
 interface CurriculumMonth {
   month: number;
@@ -111,7 +111,7 @@ export default function CourseRoadmap({ curriculum, duration }: CourseRoadmapPro
                 </div>
 
                 <div className="relative z-10 flex items-center justify-center w-12 h-12 md:w-16 md:h-16 bg-white border-4 border-primary rounded-full shadow-lg flex-shrink-0">
-                  <span className="text-lg md:text-xl font-bold text-primary">{month.month}</span>
+                  <ChevronDown className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                 </div>
 
                 <div className={`w-full md:w-5/12 ${isEven ? 'md:text-left' : 'md:text-right'}`}>
