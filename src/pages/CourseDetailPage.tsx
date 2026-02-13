@@ -45,10 +45,6 @@ interface CourseData {
     day: string;
     time: string;
   }[];
-  fees: {
-    amount: string;
-    installments: string;
-  };
   curriculum: {
     month: number;
     phase: string;
@@ -118,10 +114,6 @@ const coursesData: Record<string, CourseData> = {
       { day: 'Monday, Wednesday, Friday', time: '6:00 PM - 8:00 PM' },
       { day: 'Tuesday, Thursday, Saturday', time: '9:00 AM - 11:00 AM' }
     ],
-    fees: {
-      amount: '₹25,000',
-      installments: 'Available in 2 installments'
-    },
     curriculum: [
       {
         month: 1,
@@ -216,10 +208,6 @@ const coursesData: Record<string, CourseData> = {
       { day: 'Monday to Friday', time: '5:00 PM - 7:00 PM' },
       { day: 'Weekend Batch (Sat-Sun)', time: '10:00 AM - 2:00 PM' }
     ],
-    fees: {
-      amount: '₹40,000',
-      installments: 'Available in 3 installments'
-    },
     curriculum: [
       {
         month: 1,
@@ -327,10 +315,6 @@ const coursesData: Record<string, CourseData> = {
       { day: 'Tuesday, Thursday, Saturday', time: '5:00 PM - 7:00 PM' },
       { day: 'Weekend Batch (Sat-Sun)', time: '3:00 PM - 6:00 PM' }
     ],
-    fees: {
-      amount: '₹22,000',
-      installments: 'Available in 2 installments'
-    },
     curriculum: [
       {
         month: 1,
@@ -421,10 +405,6 @@ const coursesData: Record<string, CourseData> = {
       { day: 'Monday to Friday', time: '6:00 PM - 8:00 PM' },
       { day: 'Weekend Batch (Sat-Sun)', time: '9:00 AM - 1:00 PM' }
     ],
-    fees: {
-      amount: '₹28,000',
-      installments: 'Available in 2 installments'
-    },
     curriculum: [
       {
         month: 1,
@@ -648,23 +628,6 @@ export default function CourseDetailPage() {
                       </div>
                     </div>
                   ))}
-                </div>
-              </div>
-
-              <div className="bg-gradient-to-br from-gray-50 to-blue-50 p-8 rounded-2xl">
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Course Fees</h2>
-                <p className="text-4xl font-bold text-primary mb-2">{course.fees.amount}</p>
-                <p className="text-gray-600">{course.fees.installments}</p>
-                <div className="mt-6 flex flex-col sm:flex-row gap-4">
-                  <button className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#004BB8] transition-colors">
-                    Enroll Now
-                  </button>
-                  <Link
-                    to="/contact"
-                    className="bg-white text-primary border-2 border-primary px-8 py-3 rounded-lg font-semibold hover:bg-[#004BB8] hover:text-white hover:border-[#004BB8] transition-colors text-center"
-                  >
-                    Contact for Details
-                  </Link>
                 </div>
               </div>
             </div>
