@@ -233,10 +233,9 @@ export default function HeroSlider() {
         <div className="bg-white px-5 py-4 pb-24">
           <div
             key={`mobile-content-${slide.id}`}
-            className="space-y-0 transition-all duration-700 ease-in-out"
+            className="space-y-0 transition-opacity duration-700 ease-in-out"
             style={{
-              opacity: isTransitioning ? 0 : 1,
-              transform: isTransitioning ? 'translateY(20px)' : 'translateY(0)'
+              opacity: isTransitioning ? 0 : 1
             }}
           >
             {/* Eyebrow Text - Context Label */}
@@ -302,10 +301,9 @@ export default function HeroSlider() {
           <div className="w-full max-w-[600px]">
             <div
               key={`desktop-content-${slide.id}`}
-              className="space-y-0 transition-all duration-700 ease-in-out"
+              className="space-y-0 transition-opacity duration-700 ease-in-out"
               style={{
-                opacity: isTransitioning ? 0 : 1,
-                transform: isTransitioning ? 'translateY(20px)' : 'translateY(0)'
+                opacity: isTransitioning ? 0 : 1
               }}
             >
               {/* Eyebrow Text */}
