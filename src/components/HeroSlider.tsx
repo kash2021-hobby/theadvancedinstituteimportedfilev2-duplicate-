@@ -79,8 +79,8 @@ export default function HeroSlider() {
       setIsTransitioning(true);
       setTimeout(() => {
         setCurrentSlide((prev) => (prev + 1) % slides.length);
-        setIsTransitioning(false);
-      }, 300);
+        setTimeout(() => setIsTransitioning(false), 50);
+      }, 600);
     }, 5000);
 
     return () => clearInterval(interval);
@@ -95,27 +95,27 @@ export default function HeroSlider() {
     setIsTransitioning(true);
     setTimeout(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-      setIsTransitioning(false);
+      setTimeout(() => setIsTransitioning(false), 50);
       setIsAutoPlaying(false);
-    }, 300);
+    }, 600);
   };
 
   const prevSlide = () => {
     setIsTransitioning(true);
     setTimeout(() => {
       setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-      setIsTransitioning(false);
+      setTimeout(() => setIsTransitioning(false), 50);
       setIsAutoPlaying(false);
-    }, 300);
+    }, 600);
   };
 
   const goToSlide = (index: number) => {
     setIsTransitioning(true);
     setTimeout(() => {
       setCurrentSlide(index);
-      setIsTransitioning(false);
+      setTimeout(() => setIsTransitioning(false), 50);
       setIsAutoPlaying(false);
-    }, 300);
+    }, 600);
   };
 
   const handleMouseEnter = () => {
@@ -233,10 +233,10 @@ export default function HeroSlider() {
         <div className="bg-white px-5 py-4 pb-24">
           <div
             key={`mobile-content-${slide.id}`}
-            className="space-y-0 transition-all duration-300"
+            className="space-y-0 transition-all duration-700 ease-in-out"
             style={{
               opacity: isTransitioning ? 0 : 1,
-              transform: isTransitioning ? 'translateX(-20px)' : 'translateX(0)'
+              transform: isTransitioning ? 'translateY(20px)' : 'translateY(0)'
             }}
           >
             {/* Eyebrow Text - Context Label */}
@@ -302,10 +302,10 @@ export default function HeroSlider() {
           <div className="w-full max-w-[600px]">
             <div
               key={`desktop-content-${slide.id}`}
-              className="space-y-0 transition-all duration-300"
+              className="space-y-0 transition-all duration-700 ease-in-out"
               style={{
                 opacity: isTransitioning ? 0 : 1,
-                transform: isTransitioning ? 'translateX(-30px)' : 'translateX(0)'
+                transform: isTransitioning ? 'translateY(20px)' : 'translateY(0)'
               }}
             >
               {/* Eyebrow Text */}
