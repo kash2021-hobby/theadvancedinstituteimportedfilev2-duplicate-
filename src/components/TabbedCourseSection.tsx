@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Clock, Calendar, ChevronRight, ChevronLeft } from 'lucide-react';
+import { Clock, Calendar, ChevronRight, ChevronLeft, ChevronUp } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 interface Course {
@@ -158,9 +158,10 @@ export default function TabbedCourseSection() {
               <div className="space-y-6">
                 <div className="bg-white rounded-2xl shadow-lg overflow-hidden p-2">
                   <button
-                    className="w-full text-left px-6 py-4 rounded-xl transition-all font-satoshi font-normal text-base leading-[26px] bg-blue-600 text-white shadow-md"
+                    className="w-full flex items-center justify-between px-6 py-4 rounded-xl transition-all font-satoshi font-normal text-base leading-[26px] bg-white text-blue-600 border-2 border-blue-600 shadow-md"
                   >
-                    {selectedCategory}
+                    <span>{selectedCategory}</span>
+                    <ChevronUp className="w-5 h-5 text-blue-600" />
                   </button>
                 </div>
 
