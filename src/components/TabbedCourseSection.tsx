@@ -82,15 +82,13 @@ export default function TabbedCourseSection() {
   };
 
   const handleNext = () => {
-    if (currentSlide < filteredCourses.length - 1) {
-      scrollToSlide(currentSlide + 1);
-    }
+    const nextSlide = currentSlide === filteredCourses.length - 1 ? 0 : currentSlide + 1;
+    scrollToSlide(nextSlide);
   };
 
   const handlePrev = () => {
-    if (currentSlide > 0) {
-      scrollToSlide(currentSlide - 1);
-    }
+    const prevSlide = currentSlide === 0 ? filteredCourses.length - 1 : currentSlide - 1;
+    scrollToSlide(prevSlide);
   };
 
   return (
@@ -250,20 +248,14 @@ export default function TabbedCourseSection() {
                     <>
                       <button
                         onClick={handlePrev}
-                        disabled={currentSlide === 0}
-                        className={`absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white p-2 rounded-full shadow-lg transition-all ${
-                          currentSlide === 0 ? 'opacity-50 cursor-not-allowed' : ''
-                        }`}
+                        className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white p-2 rounded-full shadow-lg transition-all"
                         aria-label="Previous course"
                       >
                         <ChevronLeft className="w-5 h-5 text-gray-900" />
                       </button>
                       <button
                         onClick={handleNext}
-                        disabled={currentSlide === filteredCourses.length - 1}
-                        className={`absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white p-2 rounded-full shadow-lg transition-all ${
-                          currentSlide === filteredCourses.length - 1 ? 'opacity-50 cursor-not-allowed' : ''
-                        }`}
+                        className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white p-2 rounded-full shadow-lg transition-all"
                         aria-label="Next course"
                       >
                         <ChevronRight className="w-5 h-5 text-gray-900" />
