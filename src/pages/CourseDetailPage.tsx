@@ -204,6 +204,43 @@ const coursesData: Record<string, CourseData> = {
         topics: ['Essay Writing', 'Letter Writing', 'Precis Writing', 'Application Writing']
       }
     ],
+    examPattern: [
+      {
+        stage: 'Tier 1',
+        sections: [
+          { name: 'General Intelligence and Reasoning', questions: 25, marks: 50 },
+          { name: 'General Awareness', questions: 25, marks: 50 },
+          { name: 'Quantitative Aptitude', questions: 25, marks: 50 },
+          { name: 'English Comprehension', questions: 25, marks: 50 }
+        ],
+        duration: '60 minutes',
+        total: { questions: 100, marks: 200 }
+      },
+      {
+        stage: 'Tier 2 - Paper I (Quantitative Aptitude)',
+        sections: [
+          { name: 'Quantitative Aptitude', questions: 100, marks: 200 }
+        ],
+        duration: '120 minutes',
+        total: { questions: 100, marks: 200 }
+      },
+      {
+        stage: 'Tier 2 - Paper II (English Language)',
+        sections: [
+          { name: 'English Language and Comprehension', questions: 200, marks: 200 }
+        ],
+        duration: '120 minutes',
+        total: { questions: 200, marks: 200 }
+      },
+      {
+        stage: 'Tier 3 (Descriptive Paper)',
+        sections: [
+          { name: 'Essay Writing / Letter Writing / Application Writing', questions: 1, marks: 100 }
+        ],
+        duration: '60 minutes',
+        total: { questions: 1, marks: 100 }
+      }
+    ],
     batchTimings: [
       { day: 'Monday to Friday', time: '8:00 AM - 10:00 AM' },
       { day: 'Monday to Friday', time: '5:00 PM - 7:00 PM' },
@@ -311,6 +348,37 @@ const coursesData: Record<string, CourseData> = {
         topics: ['Current Affairs', 'Static GK', 'Indian History', 'Geography', 'Economics', 'Polity', 'Science']
       }
     ],
+    examPattern: [
+      {
+        stage: 'Tier 1 (Computer Based Examination)',
+        sections: [
+          { name: 'English Language', questions: 50, marks: 100 },
+          { name: 'General Intelligence', questions: 50, marks: 100 },
+          { name: 'Quantitative Aptitude', questions: 50, marks: 100 },
+          { name: 'General Awareness', questions: 50, marks: 100 }
+        ],
+        duration: '60 minutes',
+        total: { questions: 200, marks: 400 }
+      },
+      {
+        stage: 'Tier 2 (Descriptive Paper)',
+        sections: [
+          { name: 'Essay Writing', questions: 1, marks: 50 },
+          { name: 'Letter/Application Writing', questions: 1, marks: 50 }
+        ],
+        duration: '60 minutes',
+        total: { questions: 2, marks: 100 }
+      },
+      {
+        stage: 'Tier 3 (Skill Test)',
+        sections: [
+          { name: 'Typing Test (English) - 35 WPM', questions: 1, marks: 0 },
+          { name: 'Typing Test (Hindi) - 30 WPM', questions: 1, marks: 0 }
+        ],
+        duration: '10 minutes',
+        total: { questions: 1, marks: 0 }
+      }
+    ],
     batchTimings: [
       { day: 'Monday, Wednesday, Friday', time: '7:00 AM - 9:00 AM' },
       { day: 'Tuesday, Thursday, Saturday', time: '5:00 PM - 7:00 PM' },
@@ -399,6 +467,38 @@ const coursesData: Record<string, CourseData> = {
       {
         title: 'Computer Knowledge',
         topics: ['Computer Basics', 'MS Office', 'Internet', 'Networking', 'Database', 'Computer Security']
+      }
+    ],
+    examPattern: [
+      {
+        stage: 'Preliminary Examination',
+        sections: [
+          { name: 'English Language', questions: 30, marks: 30 },
+          { name: 'Quantitative Aptitude', questions: 35, marks: 35 },
+          { name: 'Reasoning Ability', questions: 35, marks: 35 }
+        ],
+        duration: '60 minutes',
+        total: { questions: 100, marks: 100 }
+      },
+      {
+        stage: 'Mains Examination',
+        sections: [
+          { name: 'Reasoning & Computer Aptitude', questions: 45, marks: 60 },
+          { name: 'General/Economy/Banking Awareness', questions: 40, marks: 40 },
+          { name: 'English Language', questions: 35, marks: 40 },
+          { name: 'Data Analysis & Interpretation', questions: 35, marks: 60 }
+        ],
+        duration: '180 minutes',
+        total: { questions: 155, marks: 200 }
+      },
+      {
+        stage: 'Descriptive Test (Mains)',
+        sections: [
+          { name: 'Essay Writing', questions: 1, marks: 25 },
+          { name: 'Letter Writing', questions: 1, marks: 25 }
+        ],
+        duration: '30 minutes',
+        total: { questions: 2, marks: 50 }
       }
     ],
     batchTimings: [
@@ -600,16 +700,36 @@ export default function CourseDetailPage() {
               {course.examPattern && (
                 <div>
                   <h2 className="text-3xl font-bold text-gray-900 mb-6">Exam Pattern</h2>
-                  <p className="text-gray-700 mb-6 text-sm md:text-base">
-                    The RRB NTPC 2025-26 exam will be conducted in two stages: Stage 1 (Preliminary) and Stage 2 (Main).
-                    The RRB NTPC Stage 1 and Stage 2 have the same syllabus, but the exam pattern is different.
-                  </p>
+                  {courseSlug === 'rrb-ntpc' && (
+                    <p className="text-gray-700 mb-6 text-sm md:text-base">
+                      The RRB NTPC 2025-26 exam will be conducted in two stages: Stage 1 (Preliminary) and Stage 2 (Main).
+                      The RRB NTPC Stage 1 and Stage 2 have the same syllabus, but the exam pattern is different.
+                    </p>
+                  )}
+                  {courseSlug === 'ssc-cgl' && (
+                    <p className="text-gray-700 mb-6 text-sm md:text-base">
+                      The SSC CGL exam is conducted in four tiers. Tier 1 and Tier 2 are computer-based exams,
+                      Tier 3 is a descriptive paper (pen and paper mode), and Tier 4 includes skill tests.
+                    </p>
+                  )}
+                  {courseSlug === 'ssc-chsl' && (
+                    <p className="text-gray-700 mb-6 text-sm md:text-base">
+                      The SSC CHSL exam is conducted in three tiers. Tier 1 is a computer-based exam,
+                      Tier 2 is a descriptive paper, and Tier 3 is a skill test (typing test).
+                    </p>
+                  )}
+                  {courseSlug === 'banking' && (
+                    <p className="text-gray-700 mb-6 text-sm md:text-base">
+                      Banking exams (IBPS/SBI) are typically conducted in two stages: Preliminary and Mains.
+                      The preliminary exam is a qualifying exam, while mains includes both objective and descriptive papers.
+                    </p>
+                  )}
                   <div className="space-y-6 md:space-y-8">
                     {course.examPattern.map((pattern, index) => (
                       <div key={index} className="bg-white border-2 border-gray-200 rounded-lg overflow-hidden">
                         <div className="bg-primary text-white px-3 py-2 md:px-6 md:py-3">
                           <h3 className="text-sm md:text-xl font-bold">
-                            RRB NTPC Exam Pattern 2025-26 {pattern.stage}
+                            {course.name} Exam Pattern {pattern.stage}
                           </h3>
                         </div>
                         <div className="overflow-x-auto">
