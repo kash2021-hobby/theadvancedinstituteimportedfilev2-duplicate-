@@ -85,9 +85,31 @@ export default function CoursesPage() {
                 className="bg-white border-2 border-gray-200 rounded-2xl overflow-hidden hover:border-primary hover:shadow-2xl transition-all"
               >
                 <div className="md:flex">
-                  <div className="md:w-1/3 bg-gradient-to-br from-primary to-primary-dark p-8 flex flex-col justify-center items-center text-white">
-                    <Award className="w-16 h-16 mb-4" />
-                    <h2 className="text-3xl font-bold text-center">{course.name}</h2>
+                  <div className="md:w-1/3 bg-gradient-to-br from-primary to-primary-dark p-8 flex flex-col justify-center items-center text-white relative overflow-hidden">
+                    {course.slug === 'rrb-ntpc' ? (
+                      <>
+                        <div className="absolute inset-0 opacity-20">
+                          <img
+                            src="/train-background.webp"
+                            alt="Train background"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <div className="relative z-10">
+                          <img
+                            src="/indian-railways-logo.webp"
+                            alt="Indian Railways"
+                            className="w-20 h-20 mb-4 object-contain bg-white rounded-full p-2"
+                          />
+                          <h2 className="text-3xl font-bold text-center">{course.name}</h2>
+                        </div>
+                      </>
+                    ) : (
+                      <>
+                        <Award className="w-16 h-16 mb-4" />
+                        <h2 className="text-3xl font-bold text-center">{course.name}</h2>
+                      </>
+                    )}
                   </div>
 
                   <div className="md:w-2/3 p-8">
