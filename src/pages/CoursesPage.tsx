@@ -85,8 +85,8 @@ export default function CoursesPage() {
                 className="bg-white border-2 border-gray-200 rounded-2xl overflow-hidden hover:border-primary hover:shadow-2xl transition-all"
               >
                 <div className="md:flex">
-                  <div className={`md:w-1/3 p-8 flex flex-col justify-center items-center text-white relative overflow-hidden ${course.slug === 'rrb-ntpc' ? 'bg-gray-900' : 'bg-gradient-to-br from-primary to-primary-dark'}`}>
-                    {course.slug === 'rrb-ntpc' ? (
+                  <div className="md:w-1/3 p-8 flex flex-col justify-center items-center text-white relative overflow-hidden bg-gray-900">
+                    {course.slug === 'rrb-ntpc' && (
                       <>
                         <div className="absolute inset-0 opacity-50">
                           <img
@@ -104,10 +104,62 @@ export default function CoursesPage() {
                           <h2 className="text-3xl font-bold text-center">{course.name}</h2>
                         </div>
                       </>
-                    ) : (
+                    )}
+                    {course.slug === 'ssc-cgl' && (
                       <>
-                        <Award className="w-16 h-16 mb-4" />
-                        <h2 className="text-3xl font-bold text-center">{course.name}</h2>
+                        <div className="absolute inset-0 opacity-40">
+                          <img
+                            src="/ssc-headquarters.webp"
+                            alt="SSC Headquarters"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <div className="relative z-10 flex flex-col items-center">
+                          <img
+                            src="/ssc-logo.webp"
+                            alt="SSC Logo"
+                            className="w-20 h-20 mb-4 object-contain bg-white rounded-full p-2"
+                          />
+                          <h2 className="text-3xl font-bold text-center">{course.name}</h2>
+                        </div>
+                      </>
+                    )}
+                    {course.slug === 'ssc-chsl' && (
+                      <>
+                        <div className="absolute inset-0 opacity-40">
+                          <img
+                            src="/ssc-chsl-background.webp"
+                            alt="SSC CHSL Background"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <div className="relative z-10 flex flex-col items-center">
+                          <img
+                            src="/ssc-logo.webp"
+                            alt="SSC Logo"
+                            className="w-20 h-20 mb-4 object-contain bg-white rounded-full p-2"
+                          />
+                          <h2 className="text-3xl font-bold text-center">{course.name}</h2>
+                        </div>
+                      </>
+                    )}
+                    {course.slug === 'banking' && (
+                      <>
+                        <div className="absolute inset-0 opacity-40">
+                          <img
+                            src="/banking-background.webp"
+                            alt="Banking Background"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <div className="relative z-10 flex flex-col items-center">
+                          <img
+                            src="/banking-logo.webp"
+                            alt="Banking Logo"
+                            className="w-20 h-20 mb-4 object-contain bg-white rounded-full p-2"
+                          />
+                          <h2 className="text-3xl font-bold text-center">{course.name}</h2>
+                        </div>
                       </>
                     )}
                   </div>
