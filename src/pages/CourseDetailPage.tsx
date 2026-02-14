@@ -576,20 +576,20 @@ export default function CourseDetailPage() {
   return (
     <div>
       <section
-        className="bg-gradient-to-br from-primary to-primary-dark text-white py-16 md:py-20 relative"
+        className="bg-gradient-to-br from-primary to-primary-dark text-white py-16 md:py-20 relative overflow-hidden"
         style={
           course.backgroundImage
             ? {
                 backgroundImage: `url(${course.backgroundImage})`,
                 backgroundSize: 'cover',
-                backgroundPosition: 'center',
+                backgroundPosition: courseSlug === 'banking' ? 'left center' : 'center',
                 backgroundRepeat: 'no-repeat'
               }
             : undefined
         }
       >
         {course.backgroundImage && (
-          <div className="absolute inset-0 bg-black/40 z-0" />
+          <div className="absolute inset-0 bg-black/50 z-0" />
         )}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
