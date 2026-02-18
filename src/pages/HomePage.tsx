@@ -13,13 +13,15 @@ import {
   Play,
   GraduationCap,
   X,
-  Monitor
+  Monitor,
+  Smartphone
 } from 'lucide-react';
 import LeadForm from '../components/LeadForm';
 import ShaderBackground from '../components/ui/shader-background';
 import TabbedCourseSection from '../components/TabbedCourseSection';
 import HeroSlider from '../components/HeroSlider';
 import InfrastructureSection from '../components/InfrastructureSection';
+import MobileAppSection from '../components/MobileAppSection';
 import { SpecialLecturesSection } from '../components/SpecialLecturesSection';
 import { useState } from 'react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
@@ -43,7 +45,8 @@ export default function HomePage() {
     { icon: ClipboardCheck, text: 'Weekend Test Series' },
     { icon: TrendingUp, text: 'All India & Local Ranking' },
     { icon: BookOpen, text: 'Remedial Classes After Tests' },
-    { icon: CheckCircle2, text: 'Previous Year Paper Practice' }
+    { icon: CheckCircle2, text: 'Previous Year Paper Practice' },
+    { icon: Smartphone, text: '24/7 Mobile App with Instant Doubt Clearing & Faculty Chat', isNew: true }
   ];
 
   const programSteps = [
@@ -82,6 +85,30 @@ export default function HomePage() {
     {
       question: 'Is fast track available?',
       answer: 'Yes, we offer intensive fast-track batches for students who need to prepare in a shorter timeframe. Contact us for details.'
+    },
+    {
+      question: 'When will The Advanced Learning Academy mobile app be available?',
+      answer: 'We\'re finalizing our mobile app and it will be available soon on both iOS and Android. Students who enroll now will get priority early access with exclusive features.'
+    },
+    {
+      question: 'Will the mobile app be free for enrolled students?',
+      answer: 'Yes! The mobile app is completely free for all enrolled students. You\'ll get full access to all features including live classes, recorded lectures, and direct faculty messaging.'
+    },
+    {
+      question: 'What are the main features of the mobile app?',
+      answer: 'The app offers 24/7 access to recorded classes, instant doubt clearing, direct messaging with faculty, live class integration, offline lecture downloads, performance analytics, smart notifications, and your complete digital study library.'
+    },
+    {
+      question: 'Can I download lectures for offline viewing?',
+      answer: 'Absolutely! You can download any lecture or study material for offline access, perfect for studying during commutes or in areas with limited internet connectivity.'
+    },
+    {
+      question: 'How does the instant doubt clearing feature work?',
+      answer: 'Simply snap a photo of your question or type it in the app, and our faculty will respond within minutes. You can also schedule doubt clearing sessions and get personalized help.'
+    },
+    {
+      question: 'Will I be able to message my teachers directly through the app?',
+      answer: 'Yes! The app includes a direct messaging feature where you can communicate with your faculty, ask questions, seek guidance, and get personalized study advice anytime.'
     }
   ];
 
@@ -303,6 +330,8 @@ export default function HomePage() {
       </section>
 
       <InfrastructureSection />
+
+      <MobileAppSection />
 
       <SpecialLecturesSection />
 

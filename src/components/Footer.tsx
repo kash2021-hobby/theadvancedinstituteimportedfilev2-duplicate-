@@ -15,7 +15,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-sm text-gray-400 mb-4">
-              Where learning meets employment. Expert coaching for SSC, Banking, Railway and more government exams.
+              Where learning meets employment. Expert coaching for SSC, Banking, Railway and more government exams. Now with 24/7 mobile app support coming soon!
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400  transition-colors">
@@ -57,6 +57,11 @@ export default function Footer() {
                 <Link to="/contact" className="text-sm  transition-colors">
                   Contact Us
                 </Link>
+              </li>
+              <li>
+                <a href="/#mobile-app" className="text-sm text-rose-400 hover:text-rose-300 transition-colors font-semibold">
+                  Mobile App (Coming Soon)
+                </a>
               </li>
             </ul>
           </div>
