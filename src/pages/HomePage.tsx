@@ -78,44 +78,45 @@ export default function HomePage() {
     <div>
       <HeroSlider />
 
-      <section className="py-8 bg-white border-b border-gray-100 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-12 bg-gradient-to-br from-primary-50 via-white to-ocean-50 border-b border-primary-100 overflow-hidden relative">
+        <div className="absolute inset-0 bg-blue-radial opacity-40"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Desktop: Normal Grid */}
           <div className="hidden md:grid md:grid-cols-5 gap-8">
-            <div className="flex flex-col items-center justify-center text-center p-4 rounded-xl transition-all hover:scale-105 hover:shadow-lg bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-200">
-              <div className="bg-white p-3 rounded-full shadow-md mb-3">
-                <Users className="w-6 h-6" style={{ color: '#0C64E5' }} />
+            <div className="flex flex-col items-center justify-center text-center p-6 rounded-2xl card-hover-lift bg-gradient-to-br from-primary-50 to-primary-100 border-2 border-primary-200 shadow-blue-md group">
+              <div className="bg-white p-4 rounded-full shadow-blue-md mb-4 group-hover:animate-float">
+                <Users className="w-7 h-7 text-primary-600" />
               </div>
-              <span className="text-sm md:text-base font-semibold text-gray-900">Small Batches</span>
-              <span className="text-xs text-gray-600">Max 20 Students</span>
+              <span className="text-base font-bold text-gray-900 mb-1">Small Batches</span>
+              <span className="text-sm text-gray-600 font-medium">Max 20 Students</span>
             </div>
-            <div className="flex flex-col items-center justify-center text-center p-4 rounded-xl transition-all hover:scale-105 hover:shadow-lg bg-gradient-to-br from-emerald-50 to-emerald-100 border-2 border-emerald-200">
-              <div className="bg-white p-3 rounded-full shadow-md mb-3">
-                <BookOpen className="w-6 h-6" style={{ color: '#10B981' }} />
+            <div className="flex flex-col items-center justify-center text-center p-6 rounded-2xl card-hover-lift bg-gradient-to-br from-sky-50 to-sky-100 border-2 border-sky-200 shadow-ocean-md group">
+              <div className="bg-white p-4 rounded-full shadow-ocean-md mb-4 group-hover:animate-float">
+                <BookOpen className="w-7 h-7 text-sky-600" />
               </div>
-              <span className="text-sm md:text-base font-semibold text-gray-900">Study Material</span>
-              <span className="text-xs text-gray-600">Print + Digital</span>
+              <span className="text-base font-bold text-gray-900 mb-1">Study Material</span>
+              <span className="text-sm text-gray-600 font-medium">Print + Digital</span>
             </div>
-            <div className="flex flex-col items-center justify-center text-center p-4 rounded-xl transition-all hover:scale-105 hover:shadow-lg bg-gradient-to-br from-amber-50 to-amber-100 border-2 border-amber-200">
-              <div className="bg-white p-3 rounded-full shadow-md mb-3">
-                <ClipboardCheck className="w-6 h-6" style={{ color: '#F59E0B' }} />
+            <div className="flex flex-col items-center justify-center text-center p-6 rounded-2xl card-hover-lift bg-gradient-to-br from-ocean-50 to-ocean-100 border-2 border-ocean-200 shadow-blue-md group">
+              <div className="bg-white p-4 rounded-full shadow-blue-md mb-4 group-hover:animate-float">
+                <ClipboardCheck className="w-7 h-7 text-ocean-600" />
               </div>
-              <span className="text-sm md:text-base font-semibold text-gray-900">Mock Tests</span>
-              <span className="text-xs text-gray-600">Full Length</span>
+              <span className="text-base font-bold text-gray-900 mb-1">Mock Tests</span>
+              <span className="text-sm text-gray-600 font-medium">Full Length</span>
             </div>
-            <div className="flex flex-col items-center justify-center text-center p-4 rounded-xl transition-all hover:scale-105 hover:shadow-lg bg-gradient-to-br from-purple-50 to-purple-100 border-2 border-purple-200">
-              <div className="bg-white p-3 rounded-full shadow-md mb-3">
-                <UserCheck className="w-6 h-6" style={{ color: '#8B5CF6' }} />
+            <div className="flex flex-col items-center justify-center text-center p-6 rounded-2xl card-hover-lift bg-gradient-to-br from-primary-100 to-primary-200 border-2 border-primary-300 shadow-blue-md group">
+              <div className="bg-white p-4 rounded-full shadow-blue-md mb-4 group-hover:animate-float">
+                <UserCheck className="w-7 h-7 text-primary-700" />
               </div>
-              <span className="text-sm md:text-base font-semibold text-gray-900">Mentoring</span>
-              <span className="text-xs text-gray-600">Personalized</span>
+              <span className="text-base font-bold text-gray-900 mb-1">Mentoring</span>
+              <span className="text-sm text-gray-600 font-medium">Personalized</span>
             </div>
-            <div className="flex flex-col items-center justify-center text-center p-4 rounded-xl transition-all hover:scale-105 hover:shadow-lg bg-gradient-to-br from-cyan-50 to-cyan-100 border-2 border-cyan-200">
-              <div className="bg-white p-3 rounded-full shadow-md mb-3">
-                <MapPin className="w-6 h-6" style={{ color: '#06B6D4' }} />
+            <div className="flex flex-col items-center justify-center text-center p-6 rounded-2xl card-hover-lift bg-gradient-to-br from-sky-100 to-ocean-100 border-2 border-sky-300 shadow-ocean-md group">
+              <div className="bg-white p-4 rounded-full shadow-ocean-md mb-4 group-hover:animate-float">
+                <MapPin className="w-7 h-7 text-ocean-600" />
               </div>
-              <span className="text-sm md:text-base font-semibold text-gray-900">Guwahati</span>
-              <span className="text-xs text-gray-600">Prime Location</span>
+              <span className="text-base font-bold text-gray-900 mb-1">Guwahati</span>
+              <span className="text-sm text-gray-600 font-medium">Prime Location</span>
             </div>
           </div>
 
@@ -200,32 +201,36 @@ export default function HomePage() {
 
       <TabbedCourseSection />
 
-      <section className="py-20 md:py-24" style={{ backgroundColor: '#ECFFFA' }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div ref={testimonialsAnimation.ref} style={testimonialsAnimation.style} className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+      <section className="py-24 md:py-32 bg-gradient-to-br from-ocean-50 via-primary-50 to-white relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-primary-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-ocean-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float" style={{animationDelay: '1s'}}></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div ref={testimonialsAnimation.ref} style={testimonialsAnimation.style} className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-black text-gradient-blue mb-6 tracking-tight">
               Why Choose The Advanced Learning Academy
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-ocean-500 mx-auto mb-6 rounded-full"></div>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto font-medium leading-relaxed">
               Discover what makes us the preferred choice for government exam preparation
             </p>
           </div>
 
-          <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
+          <div className="bg-white rounded-3xl shadow-blue-xl overflow-hidden border-2 border-primary-100 glow-border">
             <div className="grid lg:grid-cols-2 gap-0">
-              <div className="relative bg-gradient-to-br from-gray-100 to-gray-200 aspect-video lg:aspect-auto flex items-center justify-center group cursor-pointer">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20"></div>
-                <div className="relative z-10 bg-white rounded-full p-8 shadow-2xl group-hover:scale-110 transition-transform duration-300">
-                  <Play className="w-16 h-16 text-primary fill-primary" />
+              <div className="relative bg-gradient-to-br from-primary-100 via-ocean-100 to-primary-200 aspect-video lg:aspect-auto flex items-center justify-center group cursor-pointer overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-ocean/30"></div>
+                <div className="absolute inset-0 opacity-20 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzNCODJGNiIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')]"></div>
+                <div className="relative z-10 bg-gradient-to-br from-white to-primary-50 rounded-full p-10 shadow-blue-xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 animate-pulse">
+                  <Play className="w-20 h-20 text-primary-600 fill-primary-600" />
                 </div>
               </div>
 
-              <div className="p-8 md:p-12 flex flex-col justify-center">
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+              <div className="p-10 md:p-14 flex flex-col justify-center bg-gradient-to-br from-white to-primary-50/30">
+                <h3 className="text-3xl md:text-4xl font-black text-gradient-ocean mb-8 tracking-tight">
                   Hear from Our Founder
                 </h3>
 
-                <blockquote className="text-lg md:text-2xl font-semibold text-gray-900 mb-6 leading-relaxed">
+                <blockquote className="text-xl md:text-2xl font-bold text-gray-800 mb-6 leading-relaxed relative pl-6 border-l-4 border-primary-500">
                   "Welcome to The Advanced Learning Academy - where we transform your government job dreams into reality through expert guidance and proven strategies."
                 </blockquote>
               </div>
@@ -234,28 +239,30 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-20 md:py-24 bg-gradient-to-br from-primary/5 to-primary/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+      <section className="py-24 md:py-32 bg-gradient-to-br from-white via-primary-50 to-ocean-50 relative overflow-hidden">
+        <div className="absolute top-20 right-10 w-72 h-72 bg-ocean-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-black text-gradient-blue mb-6 tracking-tight">
               How Our Program Works
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-ocean-500 mx-auto mb-6 rounded-full"></div>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto font-medium leading-relaxed">
               A structured approach to ensure your success
             </p>
           </div>
 
           <div ref={programAnimation.ref} style={programAnimation.style} className="max-w-4xl mx-auto">
             {programSteps.map((step, index) => (
-              <div key={index} className="flex items-start mb-8 last:mb-0 relative">
+              <div key={index} className="flex items-start mb-10 last:mb-0 relative group">
                 {index < programSteps.length - 1 && (
-                  <div className="absolute left-6 top-14 bottom-0 w-0.5 bg-gradient-to-b from-primary to-secondary"></div>
+                  <div className="absolute left-7 top-16 bottom-0 w-1 bg-gradient-to-b from-primary-400 via-ocean-400 to-primary-600 rounded-full"></div>
                 )}
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary to-primary-dark text-white rounded-full flex items-center justify-center font-bold text-lg shadow-lg z-10 mr-6">
+                <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-primary-500 to-ocean-600 text-white rounded-full flex items-center justify-center font-black text-xl shadow-blue-lg z-10 mr-8 group-hover:scale-110 group-hover:animate-pulse transition-all duration-300">
                   {index + 1}
                 </div>
-                <div className="flex-grow bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <p className="text-gray-900 font-semibold text-lg">{step}</p>
+                <div className="flex-grow bg-white p-8 rounded-2xl shadow-blue-md hover:shadow-blue-lg card-hover-lift border-2 border-primary-100 group-hover:border-primary-300 transition-all">
+                  <p className="text-gray-900 font-bold text-xl">{step}</p>
                 </div>
               </div>
             ))}
@@ -265,18 +272,20 @@ export default function HomePage() {
 
       <InfrastructureSection />
 
-      <section className="py-20 md:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+      <section className="py-24 md:py-32 bg-gradient-to-br from-primary-50 via-white to-ocean-50 relative overflow-hidden">
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float" style={{animationDelay: '2s'}}></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-black text-gradient-ocean mb-6 tracking-tight">
               Our Expert Faculty
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <div className="w-24 h-1 bg-gradient-to-r from-ocean-500 to-primary-500 mx-auto mb-6 rounded-full"></div>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto font-medium leading-relaxed">
               Learn from experienced professionals who are dedicated to your success
             </p>
           </div>
 
-          <div ref={successStoriesAnimation.ref} style={successStoriesAnimation.style} className="grid md:grid-cols-3 gap-8">
+          <div ref={successStoriesAnimation.ref} style={successStoriesAnimation.style} className="grid md:grid-cols-3 gap-10">
             {[
               { 
                 name: "Dr. Rajesh Kumar", 
@@ -322,25 +331,26 @@ export default function HomePage() {
               }
             ].map((faculty, i) => {
               return (
-                <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-2 border border-gray-100 cursor-pointer" onClick={() => setSelectedFaculty(i)}>
-                  <div className="h-56 bg-gradient-to-br from-primary to-secondary flex items-center justify-center relative overflow-hidden">
-                    <img 
-                      src={faculty.image} 
+                <div key={i} className="bg-white rounded-3xl overflow-hidden shadow-blue-lg hover:shadow-blue-xl card-hover-lift border-2 border-primary-100 cursor-pointer group tilt-3d" onClick={() => setSelectedFaculty(i)}>
+                  <div className="h-64 bg-gradient-to-br from-primary-100 to-ocean-200 flex items-center justify-center relative overflow-hidden">
+                    <img
+                      src={faculty.image}
                       alt={faculty.name}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
-                    <div className="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-semibold z-10">
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary-900/40 to-transparent"></div>
+                    <div className="absolute top-4 right-4 bg-gradient-to-r from-primary-500 to-ocean-500 text-white px-4 py-2 rounded-full text-sm font-bold z-10 shadow-blue-md">
                       {faculty.experience}
                     </div>
                   </div>
-                  <div className="p-6">
-                    <h3 className="font-bold text-xl text-gray-900 mb-1">{faculty.name}</h3>
-                    <p className="text-primary font-semibold mb-2">{faculty.qualification}</p>
-                    <p className="text-sm text-gray-600 font-medium mb-2">Specialization:</p>
-                    <p className="text-gray-700 text-sm leading-relaxed mb-4">
+                  <div className="p-8">
+                    <h3 className="font-black text-2xl text-gray-900 mb-2">{faculty.name}</h3>
+                    <p className="text-primary-600 font-bold mb-3 text-lg">{faculty.qualification}</p>
+                    <p className="text-sm text-gray-500 font-semibold mb-2 uppercase tracking-wide">Specialization</p>
+                    <p className="text-gray-800 text-base leading-relaxed mb-6 font-medium">
                       {faculty.specialization}
                     </p>
-                    <button className="w-full bg-primary text-white py-2 rounded-lg font-semibold hover:bg-primary-dark transition-all text-sm">
+                    <button className="w-full bg-gradient-to-r from-primary-500 to-ocean-500 text-white py-3 rounded-xl font-bold hover:from-primary-600 hover:to-ocean-600 transition-all text-base shadow-blue-md hover:shadow-blue-lg btn-pulse">
                       View Full Profile
                     </button>
                   </div>
@@ -349,44 +359,48 @@ export default function HomePage() {
             })}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-16">
             <Link
               to="/about"
-              className="inline-flex items-center space-x-2 text-primary font-semibold text-lg hover:text-[#004BB8] transition-colors"
+              className="inline-flex items-center space-x-3 bg-gradient-to-r from-primary-500 to-ocean-500 text-white font-bold text-lg px-8 py-4 rounded-xl hover:from-primary-600 hover:to-ocean-600 transition-all shadow-blue-lg hover:shadow-blue-xl btn-pulse group"
             >
               <span>Meet All Our Faculty</span>
-              <ChevronRight className="w-5 h-5" />
+              <ChevronRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
         </div>
       </section>
 
-      <section className="py-10 md:py-12 bg-gradient-to-br from-cyan-50 to-blue-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div ref={ctaBannerAnimation.ref} style={ctaBannerAnimation.style} className="bg-gradient-to-br from-cyan-100/80 to-blue-100/80 rounded-2xl shadow-lg overflow-hidden border border-cyan-200/50">
+      <section className="py-16 md:py-20 bg-gradient-to-br from-ocean-50 via-primary-50 to-sky-50 relative overflow-hidden">
+        <div className="absolute top-10 right-20 w-64 h-64 bg-primary-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div ref={ctaBannerAnimation.ref} style={ctaBannerAnimation.style} className="bg-gradient-to-br from-white to-primary-50 rounded-3xl shadow-blue-xl overflow-hidden border-2 border-primary-200 glow-border">
             <div className="grid lg:grid-cols-2 gap-0">
-              <div className="p-6 md:p-8 lg:p-10 flex flex-col justify-center">
-                <div className="mb-4">
-                  <img src="/image.webp" alt="The Advanced Learning Academy" className="h-8 w-auto" />
+              <div className="p-8 md:p-10 lg:p-14 flex flex-col justify-center bg-gradient-to-br from-white to-primary-50/50">
+                <div className="mb-6 animate-fadeInScale">
+                  <img src="/image.webp" alt="The Advanced Learning Academy" className="h-10 w-auto" />
                 </div>
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 leading-tight">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-gradient-blue mb-6 leading-tight tracking-tight">
                   Level Up Your Skills with Expert-Led, Exam-Focused Courses.
                 </h2>
                 <Link
                   to="/courses"
-                  className="inline-block bg-[#0066FF] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#0052CC] transition-all shadow-lg hover:shadow-xl w-fit"
+                  className="inline-flex items-center space-x-2 bg-gradient-to-r from-primary-600 to-ocean-600 text-white px-8 py-4 rounded-xl font-bold hover:from-primary-700 hover:to-ocean-700 transition-all shadow-blue-lg hover:shadow-blue-xl w-fit text-lg btn-pulse group"
                 >
-                  Explore Our Programs
+                  <span>Explore Our Programs</span>
+                  <ChevronRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
 
-              <div className="relative min-h-[200px] lg:min-h-[280px] bg-gradient-to-br from-primary/20 to-secondary/30 flex items-center justify-center">
-                <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIxIiBvcGFjaXR5PSIwLjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-30"></div>
-                <div className="relative z-10 p-6 text-center">
-                  <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-xl max-w-xs mx-auto">
-                    <Award className="w-12 h-12 text-primary mx-auto mb-3" />
-                    <h3 className="text-lg font-bold text-gray-900 mb-1">Expert Faculty</h3>
-                    <p className="text-sm text-gray-700">Industry professionals with 15+ years experience</p>
+              <div className="relative min-h-[250px] lg:min-h-[350px] bg-gradient-to-br from-primary-100 via-ocean-100 to-primary-200 flex items-center justify-center overflow-hidden">
+                <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIxIiBvcGFjaXR5PSIwLjIiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-40"></div>
+                <div className="relative z-10 p-8 text-center">
+                  <div className="bg-white/95 backdrop-blur-md rounded-2xl p-8 shadow-blue-xl max-w-sm mx-auto border-2 border-primary-200 tilt-3d float-animation">
+                    <div className="bg-gradient-to-br from-primary-100 to-ocean-100 p-4 rounded-full inline-block mb-4">
+                      <Award className="w-14 h-14 text-primary-600" />
+                    </div>
+                    <h3 className="text-xl font-black text-gray-900 mb-2">Expert Faculty</h3>
+                    <p className="text-base text-gray-700 font-medium">Industry professionals with 15+ years experience</p>
                   </div>
                 </div>
               </div>
@@ -395,34 +409,36 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-20 md:py-24 bg-gradient-to-br from-primary/5 to-primary/10">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+      <section className="py-24 md:py-32 bg-gradient-to-br from-white via-ocean-50 to-primary-50 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-80 h-80 bg-ocean-200 rounded-full mix-blend-multiply filter blur-3xl opacity-25 animate-float"></div>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-black text-gradient-ocean mb-6 tracking-tight">
               Frequently Asked Questions
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <div className="w-24 h-1 bg-gradient-to-r from-ocean-500 to-primary-500 mx-auto mb-6 rounded-full"></div>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto font-medium leading-relaxed">
               Everything you need to know about our programs
             </p>
           </div>
 
-          <div ref={faqAnimation.ref} style={faqAnimation.style} className="space-y-4">
+          <div ref={faqAnimation.ref} style={faqAnimation.style} className="space-y-5">
             {faqs.map((faq, index) => (
-              <div key={index} className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+              <div key={index} className="bg-white border-2 border-primary-100 rounded-2xl overflow-hidden shadow-blue-md hover:shadow-blue-lg transition-all group">
                 <button
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                  className="w-full px-6 py-5 text-left hover:bg-[#004BB8]/5 transition-colors flex justify-between items-center"
+                  className="w-full px-8 py-6 text-left hover:bg-primary-50 transition-all flex justify-between items-center group"
                 >
-                  <span className="font-semibold text-gray-900 text-lg">{faq.question}</span>
+                  <span className="font-bold text-gray-900 text-xl group-hover:text-primary-600 transition-colors">{faq.question}</span>
                   <ChevronRight
-                    className={`w-5 h-5 text-primary transition-transform flex-shrink-0 ml-4 ${
+                    className={`w-6 h-6 text-primary-500 transition-transform flex-shrink-0 ml-6 ${
                       openFaq === index ? 'rotate-90' : ''
                     }`}
                   />
                 </button>
                 {openFaq === index && (
-                  <div className="px-6 py-5 bg-primary/5 border-t border-gray-200">
-                    <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                  <div className="px-8 py-6 bg-gradient-to-br from-primary-50 to-ocean-50 border-t-2 border-primary-100 animate-fadeInUp">
+                    <p className="text-gray-800 leading-relaxed text-lg font-medium">{faq.answer}</p>
                   </div>
                 )}
               </div>
@@ -431,14 +447,17 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-20 md:py-24 bg-gradient-to-br from-primary to-primary-dark relative overflow-hidden">
-        <div className="absolute inset-0 bg-white/5"></div>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div ref={leadFormAnimation.ref} style={leadFormAnimation.style} className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 border border-white/20 backdrop-blur-sm">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3 text-center">
+      <section className="py-24 md:py-32 bg-gradient-to-br from-primary-600 via-ocean-600 to-primary-700 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIxIiBvcGFjaXR5PSIwLjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-20"></div>
+        <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full mix-blend-soft-light filter blur-3xl opacity-10 animate-float"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-ocean-300 rounded-full mix-blend-soft-light filter blur-3xl opacity-10 animate-float" style={{animationDelay: '1.5s'}}></div>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div ref={leadFormAnimation.ref} style={leadFormAnimation.style} className="bg-white rounded-3xl shadow-blue-xl p-10 md:p-14 border-4 border-primary-300">
+            <h2 className="text-4xl md:text-5xl font-black text-gradient-blue mb-4 text-center tracking-tight">
               Get Admission Details
             </h2>
-            <p className="text-gray-600 mb-8 text-center text-lg">
+            <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-ocean-500 mx-auto mb-6 rounded-full"></div>
+            <p className="text-gray-700 mb-10 text-center text-xl font-medium">
               Fill out the form and our team will contact you within 24 hours
             </p>
             <LeadForm

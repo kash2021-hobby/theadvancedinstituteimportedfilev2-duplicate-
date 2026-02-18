@@ -97,18 +97,142 @@
   .text-balance {
     text-wrap: balance;
   }
-  
+
+  /* Blue Gradient Text */
+  .text-gradient-blue {
+    background: linear-gradient(135deg, #3B82F6 0%, #0EA5E9 50%, #2563EB 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-ocean {
+    background: linear-gradient(135deg, #0EA5E9 0%, #0284C7 50%, #0369A1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Gradient Backgrounds */
+  .bg-gradient-blue-mesh {
+    background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 25%, #BFDBFE 50%, #93C5FD 75%, #60A5FA 100%);
+  }
+
+  .bg-gradient-ocean-mesh {
+    background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 25%, #BAE6FD 50%, #7DD3FC 75%, #38BDF8 100%);
+  }
+
+  .bg-blue-radial {
+    background: radial-gradient(circle at center, #EFF6FF 0%, #DBEAFE 50%, #BFDBFE 100%);
+  }
+
+  /* Card Hover Effects */
+  .card-hover-lift {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .card-hover-lift:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+  }
+
+  /* Button Pulse Effect */
+  .btn-pulse {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-pulse::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+  }
+
+  .btn-pulse:hover::before {
+    width: 300px;
+    height: 300px;
+  }
+
+  /* Shimmer Effect */
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.4),
+      transparent
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+
+  /* Glow Border Animation */
+  .glow-border {
+    position: relative;
+    border: 2px solid transparent;
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(135deg, #3B82F6, #0EA5E9) border-box;
+  }
+
+  .glow-border::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(135deg, #3B82F6, #0EA5E9, #2563EB);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .glow-border:hover::before {
+    opacity: 1;
+  }
+
+  /* 3D Tilt Effect */
+  .tilt-3d {
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+  }
+
+  .tilt-3d:hover {
+    transform: perspective(1000px) rotateX(2deg) rotateY(2deg);
+  }
+
+  /* Floating Animation */
+  .float-animation {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+
   /* Hide scrollbar for carousel */
   .scrollbar-hide {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
-  
+
   .scrollbar-hide::-webkit-scrollbar {
-    display: none;  /* Chrome, Safari and Opera */
+    display: none;
   }
-  
-  /* Simplilearn-style Fade In Animation */
+
+  /* Fade In Animation */
   @keyframes fadeIn {
     0% {
       opacity: 0;
@@ -117,12 +241,12 @@
       opacity: 1;
     }
   }
-  
+
   .animate-fadeIn {
     animation: fadeIn 0.6s ease-in-out forwards;
   }
-  
-  /* Fade In with Upward Movement - Simplilearn Pattern */
+
+  /* Fade In with Upward Movement */
   @keyframes fadeInUp {
     from {
       opacity: 0;
@@ -133,8 +257,12 @@
       transform: translateY(0);
     }
   }
-  
-  /* Fade In with Scale - For Images */
+
+  .animate-fadeInUp {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  /* Fade In with Scale */
   @keyframes fadeInScale {
     from {
       opacity: 0;
@@ -145,8 +273,12 @@
       transform: scale(1);
     }
   }
-  
-  /* Slide Transition - For Content Changes */
+
+  .animate-fadeInScale {
+    animation: fadeInScale 0.5s ease-out forwards;
+  }
+
+  /* Slide Transition */
   @keyframes slideOut {
     from {
       opacity: 1;
@@ -157,7 +289,7 @@
       transform: translateX(-30px);
     }
   }
-  
+
   @keyframes slideIn {
     from {
       opacity: 0;
@@ -168,8 +300,8 @@
       transform: translateX(0);
     }
   }
-  
-  /* Horizontal Scroll Animation - Right to Left */
+
+  /* Horizontal Scroll Animation */
   @keyframes scroll-left {
     0% {
       transform: translateX(0);
@@ -178,12 +310,69 @@
       transform: translateX(-50%);
     }
   }
-  
+
   .animate-scroll-left {
     animation: scroll-left 8s linear infinite;
   }
-  
-  /* Reduced Motion Support - Accessibility */
+
+  /* Ripple Effect */
+  @keyframes ripple {
+    0% {
+      transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+
+  .ripple-effect {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ripple-effect::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(59, 130, 246, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    pointer-events: none;
+  }
+
+  .ripple-effect:active::after {
+    animation: ripple 0.6s ease-out;
+  }
+
+  /* Progress Bar Animation */
+  @keyframes progressBar {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  .animate-progress {
+    animation: progressBar 1.5s ease-out forwards;
+  }
+
+  /* Gradient Border */
+  .gradient-border {
+    border: 2px solid transparent;
+    background-image: linear-gradient(white, white),
+                      linear-gradient(135deg, #3B82F6, #0EA5E9);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
+
+  /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
