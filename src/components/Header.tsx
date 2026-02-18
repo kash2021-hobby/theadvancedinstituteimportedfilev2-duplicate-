@@ -21,6 +21,7 @@ export default function Header() {
         setIsVisible(true);
       } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
         setIsVisible(false);
+        setIsMenuOpen(false);
       }
 
       setLastScrollY(currentScrollY);
@@ -29,6 +30,21 @@ export default function Header() {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY]);
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMenuOpen]);
+
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [location.pathname]);
 
   const navLinks = [
     { name: 'Home', path: '/' },
@@ -85,26 +101,28 @@ export default function Header() {
         </div>
       </div>
 
-      {isMenuOpen && (
-        <div className="lg:hidden bg-white border-t">
-          <nav className="max-w-7xl mx-auto px-4 py-4 space-y-3">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                onClick={() => setIsMenuOpen(false)}
-                className={`block py-2 px-4 rounded-lg font-medium transition-colors ${
-                  isActive(link.path)
-                    ? 'bg-primary text-white'
-                    : 'text-gray-700'
-                }`}
-              >
-                {link.name}
-              </Link>
-            ))}
-          </nav>
-        </div>
-      )}
+      <div
+        className={`lg:hidden bg-white border-t transition-all duration-300 overflow-hidden ${
+          isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        }`}
+      >
+        <nav className="max-w-7xl mx-auto px-4 py-4 space-y-3">
+          {navLinks.map((link) => (
+            <Link
+              key={link.path}
+              to={link.path}
+              onClick={() => setIsMenuOpen(false)}
+              className={`block py-2 px-4 rounded-lg font-medium transition-colors ${
+                isActive(link.path)
+                  ? 'bg-primary text-white'
+                  : 'text-gray-700 hover:bg-gray-100'
+              }`}
+            >
+              {link.name}
+            </Link>
+          ))}
+        </nav>
+      </div>
     </header>
   );
 }
