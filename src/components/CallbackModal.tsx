@@ -4,9 +4,18 @@ import LeadForm from './LeadForm';
 interface CallbackModalProps {
   isOpen: boolean;
   onClose: () => void;
+  title?: string;
+  message?: string;
+  sourcePage?: string;
 }
 
-export default function CallbackModal({ isOpen, onClose }: CallbackModalProps) {
+export function CallbackModal({
+  isOpen,
+  onClose,
+  title = 'Request a Callback',
+  message = 'Fill out the form below and our team will contact you within 24 hours',
+  sourcePage = 'sticky-bar-callback'
+}: CallbackModalProps) {
   if (!isOpen) return null;
 
   return (
@@ -18,7 +27,7 @@ export default function CallbackModal({ isOpen, onClose }: CallbackModalProps) {
 
       <div className="relative bg-white rounded-2xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-y-auto transform transition-all scale-100 animate-fadeIn">
         <div className="sticky top-0 bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between rounded-t-2xl">
-          <h2 className="text-2xl font-bold text-gray-900">Request a Callback</h2>
+          <h2 className="text-2xl font-bold text-gray-900">{title}</h2>
           <button
             onClick={onClose}
             className="p-2 hover:bg-gray-100 rounded-full transition-colors"
@@ -29,10 +38,10 @@ export default function CallbackModal({ isOpen, onClose }: CallbackModalProps) {
 
         <div className="p-6">
           <p className="text-gray-600 mb-6">
-            Fill out the form below and our team will contact you within 24 hours
+            {message}
           </p>
           <LeadForm
-            sourcePage="sticky-bar-callback"
+            sourcePage={sourcePage}
             buttonText="Submit Request"
             onSuccess={onClose}
           />
@@ -41,3 +50,5 @@ export default function CallbackModal({ isOpen, onClose }: CallbackModalProps) {
     </div>
   );
 }
+
+export default CallbackModal;

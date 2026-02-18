@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Clock, Calendar, ChevronRight, ChevronLeft, ChevronUp, ChevronDown, Wifi } from 'lucide-react';
+import { Clock, Calendar, ChevronRight, ChevronLeft, ChevronUp, ChevronDown, Wifi, GraduationCap } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 interface Course {
@@ -12,6 +12,7 @@ interface Course {
   logo?: string;
   backgroundImage?: string;
   hasOnlineSupport?: boolean;
+  hasSpecialLectures?: boolean;
 }
 
 const courses: Course[] = [
@@ -23,7 +24,8 @@ const courses: Course[] = [
     category: 'RRB',
     logo: '/indian-railways-logo.webp',
     backgroundImage: '/train-background.webp',
-    hasOnlineSupport: true
+    hasOnlineSupport: true,
+    hasSpecialLectures: true
   },
   {
     name: 'SSC CGL',
@@ -33,7 +35,8 @@ const courses: Course[] = [
     category: 'SSC',
     logo: '/ssc-logo.webp',
     backgroundImage: '/ssc-headquarters.webp',
-    hasOnlineSupport: false
+    hasOnlineSupport: false,
+    hasSpecialLectures: true
   },
   {
     name: 'SSC CHSL',
@@ -43,7 +46,8 @@ const courses: Course[] = [
     category: 'SSC',
     logo: '/ssc-logo.webp',
     backgroundImage: '/ssc-chsl-background.webp',
-    hasOnlineSupport: false
+    hasOnlineSupport: false,
+    hasSpecialLectures: true
   },
   {
     name: 'Banking Clerical',
@@ -53,7 +57,8 @@ const courses: Course[] = [
     category: 'Banking',
     logo: '/banking-logo.webp',
     backgroundImage: '/banking-background.webp',
-    hasOnlineSupport: false
+    hasOnlineSupport: false,
+    hasSpecialLectures: true
   }
 ];
 
@@ -390,6 +395,22 @@ export default function TabbedCourseSection() {
                           </div>
 
                           <div className="p-6">
+                            {(course.hasOnlineSupport || course.hasSpecialLectures) && (
+                              <div className="flex flex-wrap gap-2 mb-4">
+                                {course.hasOnlineSupport && (
+                                  <div className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-teal-500 to-teal-600 text-white text-xs font-semibold rounded-full shadow-md">
+                                    <Wifi className="w-3.5 h-3.5" />
+                                    <span>Online Classes</span>
+                                  </div>
+                                )}
+                                {course.hasSpecialLectures && (
+                                  <div className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs font-semibold rounded-full shadow-md">
+                                    <GraduationCap className="w-3.5 h-3.5" />
+                                    <span>Expert Lectures</span>
+                                  </div>
+                                )}
+                              </div>
+                            )}
                             <div className="space-y-4 mb-6">
                               <div className="flex items-center text-gray-700">
                                 <Clock className="w-5 h-5 mr-3 text-blue-600 flex-shrink-0" />
@@ -495,10 +516,20 @@ export default function TabbedCourseSection() {
                   key={course.slug}
                   className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-1 relative"
                 >
-                  {course.hasOnlineSupport && (
-                    <div className="absolute top-3 right-3 z-20 bg-gradient-to-r from-teal-500 to-teal-600 text-white px-3 py-1.5 rounded-full text-xs font-bold shadow-lg flex items-center space-x-1.5">
-                      <Wifi className="w-3.5 h-3.5" />
-                      <span>Online</span>
+                  {(course.hasOnlineSupport || course.hasSpecialLectures) && (
+                    <div className="absolute top-3 right-3 z-20 flex flex-col gap-2">
+                      {course.hasOnlineSupport && (
+                        <div className="bg-gradient-to-r from-teal-500 to-teal-600 text-white px-3 py-1.5 rounded-full text-xs font-bold shadow-lg flex items-center space-x-1.5">
+                          <Wifi className="w-3.5 h-3.5" />
+                          <span>Online</span>
+                        </div>
+                      )}
+                      {course.hasSpecialLectures && (
+                        <div className="bg-gradient-to-r from-amber-500 to-orange-500 text-white px-3 py-1.5 rounded-full text-xs font-bold shadow-lg flex items-center space-x-1.5">
+                          <GraduationCap className="w-3.5 h-3.5" />
+                          <span>Expert Lectures</span>
+                        </div>
+                      )}
                     </div>
                   )}
                   <div

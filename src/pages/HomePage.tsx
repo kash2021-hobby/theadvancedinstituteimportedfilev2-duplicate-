@@ -20,6 +20,7 @@ import ShaderBackground from '../components/ui/shader-background';
 import TabbedCourseSection from '../components/TabbedCourseSection';
 import HeroSlider from '../components/HeroSlider';
 import InfrastructureSection from '../components/InfrastructureSection';
+import { SpecialLecturesSection } from '../components/SpecialLecturesSection';
 import { useState } from 'react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
@@ -37,6 +38,7 @@ export default function HomePage() {
 
   const whyChooseUs = [
     { icon: Award, text: 'Industry Professionals as Faculty' },
+    { icon: GraduationCap, text: 'Expert Guest Lectures by Industry Leaders' },
     { icon: Target, text: 'Exam-Focused Structured Approach' },
     { icon: ClipboardCheck, text: 'Weekend Test Series' },
     { icon: TrendingUp, text: 'All India & Local Ranking' },
@@ -301,6 +303,8 @@ export default function HomePage() {
       </section>
 
       <InfrastructureSection />
+
+      <SpecialLecturesSection />
 
       <section className="py-24 md:py-32 bg-gradient-to-br from-primary-50 via-white to-ocean-50 relative overflow-hidden">
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float" style={{animationDelay: '2s'}}></div>
