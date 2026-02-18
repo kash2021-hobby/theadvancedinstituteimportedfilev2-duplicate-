@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Clock, Calendar, ChevronRight, ChevronLeft, ChevronUp, ChevronDown } from 'lucide-react';
+import { Clock, Calendar, ChevronRight, ChevronLeft, ChevronUp, ChevronDown, Wifi } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 interface Course {
@@ -11,6 +11,7 @@ interface Course {
   category: string;
   logo?: string;
   backgroundImage?: string;
+  hasOnlineSupport?: boolean;
 }
 
 const courses: Course[] = [
@@ -21,7 +22,8 @@ const courses: Course[] = [
     slug: 'rrb-ntpc',
     category: 'RRB',
     logo: '/indian-railways-logo.webp',
-    backgroundImage: '/train-background.webp'
+    backgroundImage: '/train-background.webp',
+    hasOnlineSupport: true
   },
   {
     name: 'SSC CGL',
@@ -30,7 +32,8 @@ const courses: Course[] = [
     slug: 'ssc-cgl',
     category: 'SSC',
     logo: '/ssc-logo.webp',
-    backgroundImage: '/ssc-headquarters.webp'
+    backgroundImage: '/ssc-headquarters.webp',
+    hasOnlineSupport: false
   },
   {
     name: 'SSC CHSL',
@@ -39,7 +42,8 @@ const courses: Course[] = [
     slug: 'ssc-chsl',
     category: 'SSC',
     logo: '/ssc-logo.webp',
-    backgroundImage: '/ssc-chsl-background.webp'
+    backgroundImage: '/ssc-chsl-background.webp',
+    hasOnlineSupport: false
   },
   {
     name: 'Banking Clerical',
@@ -48,7 +52,8 @@ const courses: Course[] = [
     slug: 'banking',
     category: 'Banking',
     logo: '/banking-logo.webp',
-    backgroundImage: '/banking-background.webp'
+    backgroundImage: '/banking-background.webp',
+    hasOnlineSupport: false
   }
 ];
 
@@ -346,7 +351,13 @@ export default function TabbedCourseSection() {
                         key={`${course.slug}-${index}`}
                         className="flex-shrink-0 w-full snap-center"
                       >
-                        <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
+                        <div className="bg-white rounded-2xl overflow-hidden shadow-lg relative">
+                          {course.hasOnlineSupport && (
+                            <div className="absolute top-3 right-3 z-20 bg-gradient-to-r from-teal-500 to-teal-600 text-white px-3 py-1.5 rounded-full text-xs font-bold shadow-lg flex items-center space-x-1.5">
+                              <Wifi className="w-3.5 h-3.5" />
+                              <span>Online</span>
+                            </div>
+                          )}
                           <div
                             className="h-48 bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center relative overflow-hidden"
                             style={course.backgroundImage ? {
@@ -482,8 +493,14 @@ export default function TabbedCourseSection() {
               {filteredCourses.map((course) => (
                 <div
                   key={course.slug}
-                  className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-1"
+                  className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-1 relative"
                 >
+                  {course.hasOnlineSupport && (
+                    <div className="absolute top-3 right-3 z-20 bg-gradient-to-r from-teal-500 to-teal-600 text-white px-3 py-1.5 rounded-full text-xs font-bold shadow-lg flex items-center space-x-1.5">
+                      <Wifi className="w-3.5 h-3.5" />
+                      <span>Online</span>
+                    </div>
+                  )}
                   <div
                     className="h-48 bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center relative overflow-hidden"
                     style={course.backgroundImage ? {

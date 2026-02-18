@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Clock, Users, BookOpen, Award, CheckCircle2, ChevronRight } from 'lucide-react';
+import { Clock, Users, BookOpen, Award, CheckCircle2, ChevronRight, Monitor, Wifi } from 'lucide-react';
 
 export default function CoursesPage() {
   const courses = [
@@ -9,6 +9,7 @@ export default function CoursesPage() {
       duration: '6 Months',
       mode: 'Classroom + Online Support',
       batchSize: '20 Students',
+      hasOnlineSupport: true,
       description: 'Comprehensive preparation program for Railway Recruitment Board Non-Technical Popular Categories exam covering all sections with focused practice.',
       highlights: [
         'Complete syllabus coverage',
@@ -23,6 +24,7 @@ export default function CoursesPage() {
       duration: '6 + 3 Months',
       mode: 'Classroom Only',
       batchSize: '20 Students',
+      hasOnlineSupport: false,
       description: 'Intensive coaching for Staff Selection Commission Combined Graduate Level examination with dedicated modules for Tier 1, Tier 2, and Tier 3.',
       highlights: [
         'Tier-wise preparation strategy',
@@ -37,6 +39,7 @@ export default function CoursesPage() {
       duration: '6 Months',
       mode: 'Classroom Only',
       batchSize: '20 Students',
+      hasOnlineSupport: false,
       description: 'Structured program for Staff Selection Commission Combined Higher Secondary Level exam focusing on fundamentals and speed building.',
       highlights: [
         'Foundation to advanced concepts',
@@ -51,6 +54,7 @@ export default function CoursesPage() {
       duration: '6 Months',
       mode: 'Classroom Only',
       batchSize: '20 Students',
+      hasOnlineSupport: false,
       description: 'Complete banking exam preparation covering IBPS PO, Clerk, SBI, and RBI exams with specialized banking awareness modules.',
       highlights: [
         'Banking awareness classes',
@@ -82,8 +86,14 @@ export default function CoursesPage() {
             {courses.map((course) => (
               <div
                 key={course.slug}
-                className="bg-white border-2 border-gray-200 rounded-2xl overflow-hidden hover:border-primary hover:shadow-2xl transition-all"
+                className="bg-white border-2 border-gray-200 rounded-2xl overflow-hidden hover:border-primary hover:shadow-2xl transition-all relative"
               >
+                {course.hasOnlineSupport && (
+                  <div className="absolute top-4 right-4 z-20 bg-gradient-to-r from-teal-500 to-teal-600 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg flex items-center space-x-2">
+                    <Wifi className="w-4 h-4" />
+                    <span>Online Available</span>
+                  </div>
+                )}
                 <div className="md:flex">
                   <div className="md:w-1/3 p-8 flex flex-col justify-center items-center text-white relative overflow-hidden bg-gray-900">
                     {course.slug === 'rrb-ntpc' && (
@@ -185,10 +195,16 @@ export default function CoursesPage() {
                         </div>
                       </div>
                       <div className="flex items-center space-x-2 text-gray-700">
-                        <BookOpen className="w-5 h-5 text-primary flex-shrink-0" />
+                        {course.hasOnlineSupport ? (
+                          <Monitor className="w-5 h-5 text-teal-600 flex-shrink-0" />
+                        ) : (
+                          <BookOpen className="w-5 h-5 text-primary flex-shrink-0" />
+                        )}
                         <div>
                           <p className="text-xs text-gray-500">Mode</p>
-                          <p className="font-semibold">{course.mode}</p>
+                          <p className={`font-semibold ${course.hasOnlineSupport ? 'text-teal-700' : ''}`}>
+                            {course.mode}
+                          </p>
                         </div>
                       </div>
                     </div>

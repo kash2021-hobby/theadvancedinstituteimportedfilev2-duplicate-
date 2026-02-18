@@ -12,7 +12,8 @@ import {
   CheckCircle2,
   Play,
   GraduationCap,
-  X
+  X,
+  Monitor
 } from 'lucide-react';
 import LeadForm from '../components/LeadForm';
 import ShaderBackground from '../components/ui/shader-background';
@@ -44,17 +45,21 @@ export default function HomePage() {
   ];
 
   const programSteps = [
-    'Concept Classes (3 Days per Week)',
+    'Concept Classes (3 Days per Week) - Available Online & Offline',
     'Weekly Practice Tests',
     'Full Length Mock Exams',
     'Performance Analysis',
-    'Remedial & Doubt Clearing Sessions'
+    'Remedial & Doubt Clearing Sessions - Online Support Available'
   ];
 
   const faqs = [
     {
       question: 'Do you provide study materials?',
       answer: 'Yes, we provide both printed and PDF study materials covering the complete syllabus with practice questions and mock tests.'
+    },
+    {
+      question: 'Are online classes available?',
+      answer: 'Yes! We now offer online classes for select courses like RRB NTPC with live sessions, recorded lectures, online doubt clearing, and digital study materials accessible from anywhere.'
     },
     {
       question: 'Are classes available offline?',
@@ -67,6 +72,10 @@ export default function HomePage() {
     {
       question: 'Do you conduct mock tests?',
       answer: 'Yes, we conduct weekly practice tests and full-length mock exams with All India and local rankings to track your progress.'
+    },
+    {
+      question: 'How do online classes work?',
+      answer: 'Our online classes feature live interactive sessions with faculty, access to recorded lectures for revision, online test portal, digital study materials, and dedicated doubt clearing sessions.'
     },
     {
       question: 'Is fast track available?',
@@ -82,13 +91,20 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-blue-radial opacity-40"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Desktop: Normal Grid */}
-          <div className="hidden md:grid md:grid-cols-5 gap-8">
+          <div className="hidden md:grid md:grid-cols-6 gap-6">
             <div className="flex flex-col items-center justify-center text-center p-6 rounded-2xl card-hover-lift bg-gradient-to-br from-primary-50 to-primary-100 border-2 border-primary-200 shadow-blue-md group">
               <div className="bg-white p-4 rounded-full shadow-blue-md mb-4 group-hover:animate-float">
                 <Users className="w-7 h-7 text-primary-600" />
               </div>
               <span className="text-base font-bold text-gray-900 mb-1">Small Batches</span>
               <span className="text-sm text-gray-600 font-medium">Max 20 Students</span>
+            </div>
+            <div className="flex flex-col items-center justify-center text-center p-6 rounded-2xl card-hover-lift bg-gradient-to-br from-teal-50 to-teal-100 border-2 border-teal-200 shadow-md group">
+              <div className="bg-white p-4 rounded-full shadow-md mb-4 group-hover:animate-float">
+                <Monitor className="w-7 h-7 text-teal-600" />
+              </div>
+              <span className="text-base font-bold text-gray-900 mb-1">Online Classes</span>
+              <span className="text-sm text-gray-600 font-medium">Available Now</span>
             </div>
             <div className="flex flex-col items-center justify-center text-center p-6 rounded-2xl card-hover-lift bg-gradient-to-br from-sky-50 to-sky-100 border-2 border-sky-200 shadow-ocean-md group">
               <div className="bg-white p-4 rounded-full shadow-ocean-md mb-4 group-hover:animate-float">
@@ -130,6 +146,13 @@ export default function HomePage() {
                 <span className="text-sm font-semibold text-gray-900">Small Batches</span>
                 <span className="text-xs text-gray-600">Max 20 Students</span>
               </div>
+              <div className="flex flex-col items-center justify-center text-center p-4 rounded-xl bg-gradient-to-br from-teal-50 to-teal-100 border-2 border-teal-200 shadow-md min-w-[140px]">
+                <div className="bg-white p-2.5 rounded-full shadow mb-2">
+                  <Monitor className="w-5 h-5" style={{ color: '#14B8A6' }} />
+                </div>
+                <span className="text-sm font-semibold text-gray-900">Online Classes</span>
+                <span className="text-xs text-gray-600">Available Now</span>
+              </div>
               <div className="flex flex-col items-center justify-center text-center p-4 rounded-xl bg-gradient-to-br from-emerald-50 to-emerald-100 border-2 border-emerald-200 shadow-md min-w-[140px]">
                 <div className="bg-white p-2.5 rounded-full shadow mb-2">
                   <BookOpen className="w-5 h-5" style={{ color: '#10B981' }} />
@@ -165,6 +188,13 @@ export default function HomePage() {
                 </div>
                 <span className="text-sm font-semibold text-gray-900">Small Batches</span>
                 <span className="text-xs text-gray-600">Max 20 Students</span>
+              </div>
+              <div className="flex flex-col items-center justify-center text-center p-4 rounded-xl bg-gradient-to-br from-teal-50 to-teal-100 border-2 border-teal-200 shadow-md min-w-[140px]">
+                <div className="bg-white p-2.5 rounded-full shadow mb-2">
+                  <Monitor className="w-5 h-5" style={{ color: '#14B8A6' }} />
+                </div>
+                <span className="text-sm font-semibold text-gray-900">Online Classes</span>
+                <span className="text-xs text-gray-600">Available Now</span>
               </div>
               <div className="flex flex-col items-center justify-center text-center p-4 rounded-xl bg-gradient-to-br from-emerald-50 to-emerald-100 border-2 border-emerald-200 shadow-md min-w-[140px]">
                 <div className="bg-white p-2.5 rounded-full shadow mb-2">

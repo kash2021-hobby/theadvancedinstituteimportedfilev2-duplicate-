@@ -10,7 +10,11 @@ import {
   Target,
   FileText,
   ChevronDown,
-  Play
+  Play,
+  Monitor,
+  Wifi,
+  Video,
+  Laptop
 } from 'lucide-react';
 import LeadForm from '../components/LeadForm';
 import CourseRoadmap from '../components/CourseRoadmap';
@@ -594,6 +598,12 @@ export default function CourseDetailPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6" style={course.backgroundImage ? { textShadow: '2px 2px 8px rgba(0,0,0,0.7)' } : undefined}>{course.name}</h1>
+            {courseSlug === 'rrb-ntpc' && (
+              <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-teal-500 to-teal-600 text-white px-5 py-2 rounded-full text-sm font-bold shadow-lg mb-4">
+                <Wifi className="w-5 h-5" />
+                <span>Online Classes Available</span>
+              </div>
+            )}
             <p className="text-xl text-blue-50 mb-8" style={course.backgroundImage ? { textShadow: '2px 2px 8px rgba(0,0,0,0.7)' } : undefined}>{course.description}</p>
             <div className="flex flex-wrap justify-center gap-6" style={course.backgroundImage ? { textShadow: '2px 2px 8px rgba(0,0,0,0.7)' } : undefined}>
               <div className="flex items-center space-x-2">
@@ -688,6 +698,74 @@ export default function CourseDetailPage() {
                 <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center md:text-left">Course Overview</h2>
                 <p className="text-gray-700 leading-relaxed text-center md:text-left">{course.overview}</p>
               </div>
+
+              {courseSlug === 'rrb-ntpc' && (
+                <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-8 border-2 border-teal-200">
+                  <div className="flex items-center space-x-3 mb-6">
+                    <div className="bg-teal-600 p-3 rounded-full">
+                      <Monitor className="w-8 h-8 text-white" />
+                    </div>
+                    <h2 className="text-3xl font-bold text-gray-900">Online Learning Features</h2>
+                  </div>
+                  <p className="text-gray-700 mb-6 leading-relaxed">
+                    This course includes comprehensive online support, giving you the flexibility to learn from anywhere while maintaining the quality of classroom instruction.
+                  </p>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="bg-white rounded-xl p-5 shadow-md">
+                      <div className="flex items-start space-x-4">
+                        <div className="bg-teal-100 p-3 rounded-lg">
+                          <Video className="w-6 h-6 text-teal-600" />
+                        </div>
+                        <div>
+                          <h3 className="font-bold text-gray-900 mb-2">Live & Recorded Sessions</h3>
+                          <p className="text-sm text-gray-600">
+                            Attend live classes online and access recorded lectures anytime for revision
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="bg-white rounded-xl p-5 shadow-md">
+                      <div className="flex items-start space-x-4">
+                        <div className="bg-teal-100 p-3 rounded-lg">
+                          <Laptop className="w-6 h-6 text-teal-600" />
+                        </div>
+                        <div>
+                          <h3 className="font-bold text-gray-900 mb-2">Online Test Portal</h3>
+                          <p className="text-sm text-gray-600">
+                            Take mock tests online with instant results and performance analysis
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="bg-white rounded-xl p-5 shadow-md">
+                      <div className="flex items-start space-x-4">
+                        <div className="bg-teal-100 p-3 rounded-lg">
+                          <FileText className="w-6 h-6 text-teal-600" />
+                        </div>
+                        <div>
+                          <h3 className="font-bold text-gray-900 mb-2">Digital Study Materials</h3>
+                          <p className="text-sm text-gray-600">
+                            Access comprehensive PDF study materials and notes from any device
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="bg-white rounded-xl p-5 shadow-md">
+                      <div className="flex items-start space-x-4">
+                        <div className="bg-teal-100 p-3 rounded-lg">
+                          <Users className="w-6 h-6 text-teal-600" />
+                        </div>
+                        <div>
+                          <h3 className="font-bold text-gray-900 mb-2">Online Doubt Clearing</h3>
+                          <p className="text-sm text-gray-600">
+                            Get your questions answered through dedicated online doubt clearing sessions
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
 
               <div>
                 <h2 className="text-3xl font-bold mb-6 text-center md:text-left">
@@ -855,6 +933,15 @@ export default function CourseDetailPage() {
                         <p className="text-sm text-gray-600">Learn from industry professionals</p>
                       </div>
                     </div>
+                    {courseSlug === 'rrb-ntpc' && (
+                      <div className="flex items-start space-x-3">
+                        <Monitor className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
+                        <div>
+                          <p className="font-medium text-gray-900">Flexible Online Access</p>
+                          <p className="text-sm text-gray-600">Learn from anywhere, anytime</p>
+                        </div>
+                      </div>
+                    )}
                     <div className="flex items-start space-x-3">
                       <TrendingUp className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                       <div>
@@ -869,6 +956,15 @@ export default function CourseDetailPage() {
                         <p className="text-sm text-gray-600">Comprehensive study resources</p>
                       </div>
                     </div>
+                    {courseSlug === 'rrb-ntpc' && (
+                      <div className="flex items-start space-x-3">
+                        <Video className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
+                        <div>
+                          <p className="font-medium text-gray-900">Recorded Lectures</p>
+                          <p className="text-sm text-gray-600">Access recordings for revision</p>
+                        </div>
+                      </div>
+                    )}
                     <div className="flex items-start space-x-3">
                       <FileText className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                       <div>
