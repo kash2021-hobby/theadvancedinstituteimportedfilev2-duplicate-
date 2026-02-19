@@ -378,19 +378,19 @@ export default function HomePage() {
                 teachingApproach: "Application based approach focusing on practical English usage for competitive exams",
                 quote: "Master English with practical application to excel in all government exams"
               },
-              { 
-                name: "Mr. Vikram Singh", 
-                qualification: "Ex-Railway Officer", 
-                experience: "10+ Years", 
-                specialization: "RRB & Technical Subjects",
+              {
+                name: "N. Bhuyan",
+                qualification: "Post Graduate - HOD",
+                experience: "15+ Years",
+                specialization: "Quantitative Aptitude",
                 image: "/faculty-3.webp",
-                fullQualifications: "B.Tech (Mechanical), Ex-Railway Technical Officer",
-                university: "IIT Roorkee",
-                subjects: ["RRB Technical", "General Science", "Railway Procedures", "Technical Aptitude"],
-                exams: ["RRB NTPC", "RRB Group D", "RRB Technician", "RRB ALP"],
-                achievement: "Former Railway officer with insider knowledge of railway recruitment",
-                teachingApproach: "Practical approach with real railway exam insights and patterns",
-                quote: "Success in railway exams comes from understanding the system from within"
+                fullQualifications: "Post Graduate - Head of Department (Quant)",
+                university: "Teaching for top level competitive examinations",
+                subjects: ["Quantitative Aptitude"],
+                exams: ["Banking (PO/Clerk)", "Railway Exams (RRB NTPC/Group D)", "Other Government Exams"],
+                achievement: "Concept + Shortcut based teaching with 1500+ students mentored",
+                teachingApproach: "Combines strong conceptual foundation with time-saving shortcuts for competitive exams",
+                quote: "Master mathematics through concepts and smart shortcuts"
               }
             ].map((faculty, i) => {
               return (
@@ -565,19 +565,19 @@ export default function HomePage() {
                   teachingApproach: "Application based approach focusing on practical English usage for competitive exams",
                   quote: "Master English with practical application to excel in all government exams"
                 },
-                { 
-                  name: "Mr. Vikram Singh", 
-                  qualification: "Ex-Railway Officer", 
-                  experience: "10+ Years", 
-                  specialization: "RRB & Technical Subjects",
+                {
+                  name: "N. Bhuyan",
+                  qualification: "Post Graduate - HOD",
+                  experience: "15+ Years",
+                  specialization: "Quantitative Aptitude",
                   image: "/faculty-3.webp",
-                  fullQualifications: "B.Tech (Mechanical), Ex-Railway Technical Officer",
-                  university: "IIT Roorkee",
-                  subjects: ["RRB Technical", "General Science", "Railway Procedures", "Technical Aptitude"],
-                  exams: ["RRB NTPC", "RRB Group D", "RRB Technician", "RRB ALP"],
-                  achievement: "Former Railway officer with insider knowledge of railway recruitment",
-                  teachingApproach: "Practical approach with real railway exam insights and patterns",
-                  quote: "Success in railway exams comes from understanding the system from within"
+                  fullQualifications: "Post Graduate - Head of Department (Quant)",
+                  university: "Teaching for top level competitive examinations",
+                  subjects: ["Quantitative Aptitude"],
+                  exams: ["Banking (PO/Clerk)", "Railway Exams (RRB NTPC/Group D)", "Other Government Exams"],
+                  achievement: "Concept + Shortcut based teaching with 1500+ students mentored",
+                  teachingApproach: "Combines strong conceptual foundation with time-saving shortcuts for competitive exams",
+                  quote: "Master mathematics through concepts and smart shortcuts"
                 }
               ];
               const faculty = facultyData[selectedFaculty];
