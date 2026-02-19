@@ -49,6 +49,21 @@ export default function CoursesPage() {
       ]
     },
     {
+      name: 'SBI PO & IBPS PO',
+      slug: 'sbi-po-ibps-po',
+      duration: '6-8 Months',
+      mode: 'Classroom + Online Support',
+      batchSize: '20 Students',
+      hasOnlineSupport: true,
+      description: 'Comprehensive preparation for SBI PO and IBPS PO exams in one batch. Expert-led training covering all phases including prelims, mains, and interview preparation with specialized banking knowledge.',
+      highlights: [
+        'Combined SBI PO & IBPS PO syllabus',
+        'Interview & GD preparation',
+        'Banking & financial awareness',
+        'Online test series included'
+      ]
+    },
+    {
       name: 'Banking Exams',
       slug: 'banking',
       duration: '6 Months',
@@ -162,6 +177,25 @@ export default function CoursesPage() {
                           <img
                             src="/ssc-logo.webp"
                             alt="SSC Logo"
+                            className="w-20 h-20 mb-4 object-contain bg-white rounded-full p-2"
+                          />
+                          <h2 className="text-3xl font-bold text-center">{course.name}</h2>
+                        </div>
+                      </>
+                    )}
+                    {course.slug === 'sbi-po-ibps-po' && (
+                      <>
+                        <div className="absolute inset-0 opacity-40">
+                          <img
+                            src="/banking-background.webp"
+                            alt="Banking Background"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <div className="relative z-10 flex flex-col items-center">
+                          <img
+                            src="/banking-logo.webp"
+                            alt="Banking Logo"
                             className="w-20 h-20 mb-4 object-contain bg-white rounded-full p-2"
                           />
                           <h2 className="text-3xl font-bold text-center">{course.name}</h2>
