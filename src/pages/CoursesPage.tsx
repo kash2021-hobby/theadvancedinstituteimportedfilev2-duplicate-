@@ -64,6 +64,21 @@ export default function CoursesPage() {
       ]
     },
     {
+      name: 'SBI Clerk & IBPS Clerk',
+      slug: 'sbi-clerk-ibps-clerk',
+      duration: '6 Months',
+      mode: 'Classroom + Online Support',
+      batchSize: '25 Students',
+      hasOnlineSupport: true,
+      description: 'Comprehensive coaching for SBI Clerk and IBPS Clerk examinations with focus on speed, accuracy, and time management for clerical positions.',
+      highlights: [
+        'Focus on speed and accuracy',
+        'Banking awareness modules',
+        'Computer knowledge training',
+        'Online test portal access'
+      ]
+    },
+    {
       name: 'Banking Exams',
       slug: 'banking',
       duration: '6 Months',

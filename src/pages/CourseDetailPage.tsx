@@ -727,6 +727,123 @@ const coursesData: Record<string, CourseData> = {
       }
     ]
   },
+  'sbi-clerk-ibps-clerk': {
+    name: 'SBI Clerk & IBPS Clerk',
+    slug: 'sbi-clerk-ibps-clerk',
+    duration: '6 Months',
+    mode: 'Classroom + Online Support',
+    batchSize: '25 Students',
+    description: 'Comprehensive coaching for SBI Clerk and IBPS Clerk examinations with focus on accuracy and speed',
+    logo: '/banking-logo.webp',
+    backgroundImage: '/banking-background.webp',
+    overview: 'Our SBI Clerk & IBPS Clerk program is designed to provide complete preparation for clerical positions in State Bank of India and other public sector banks through IBPS. This focused course covers both Preliminary and Mains examinations with emphasis on speed, accuracy, and time management. The program includes dedicated modules for banking awareness, computer knowledge, and regional language support. With regular mock tests, doubt clearing sessions, and expert guidance, we ensure students are fully prepared to secure clerical positions in the banking sector and build a strong foundation for their banking career.',
+    highlights: [
+      'Complete preparation for Clerk level examinations',
+      'Coverage of both Prelims and Mains stages',
+      'Focus on speed and accuracy improvement',
+      'Banking awareness and computer knowledge modules',
+      'Regional language support for local bank exams',
+      'Daily practice sessions with time-bound tests',
+      'Current affairs updates with banking focus',
+      'Online test portal with detailed analytics',
+      'Flexible learning with online class access',
+      'Affordable fee structure for mass preparation'
+    ],
+    syllabus: [
+      {
+        title: 'Reasoning Ability',
+        topics: ['Coding-Decoding', 'Blood Relations', 'Direction Sense', 'Alphabet Test', 'Ranking & Order', 'Syllogism', 'Inequalities', 'Seating Arrangement (Linear & Circular)', 'Puzzles', 'Input-Output']
+      },
+      {
+        title: 'Quantitative Aptitude',
+        topics: ['Number Series', 'Simplification', 'Approximation', 'Data Interpretation (Tables, Bar Graphs, Line Graphs, Pie Charts)', 'Percentage', 'Ratio & Proportion', 'Average', 'Simple & Compound Interest', 'Profit & Loss', 'Time & Work', 'Speed, Distance & Time', 'Mensuration']
+      },
+      {
+        title: 'English Language',
+        topics: ['Reading Comprehension', 'Cloze Test', 'Spotting Errors', 'Fill in the Blanks', 'Sentence Improvement', 'Para Jumbles', 'Vocabulary', 'Synonyms & Antonyms', 'Idioms & Phrases', 'One Word Substitution']
+      },
+      {
+        title: 'General Awareness (Banking)',
+        topics: ['Current Affairs (Last 6 Months)', 'Banking Awareness', 'Financial Awareness', 'Static GK (Capitals, Currencies, Important Days)', 'Government Schemes', 'Budget Highlights', 'Economic Terminology', 'Awards & Honors', 'Sports News', 'Books & Authors']
+      },
+      {
+        title: 'Computer Knowledge',
+        topics: ['Computer Fundamentals', 'MS Office (Word, Excel, PowerPoint)', 'Internet & Email', 'Computer Hardware & Software', 'Operating Systems', 'Networking Basics', 'Computer Abbreviations', 'Computer Security', 'Digital Banking', 'Recent IT Developments']
+      }
+    ],
+    examPattern: [
+      {
+        stage: 'Preliminary Examination',
+        sections: [
+          { name: 'English Language', questions: 30, marks: 30 },
+          { name: 'Quantitative Aptitude', questions: 35, marks: 35 },
+          { name: 'Reasoning Ability', questions: 35, marks: 35 }
+        ],
+        duration: '60 minutes',
+        total: { questions: 100, marks: 100 }
+      },
+      {
+        stage: 'Mains Examination',
+        sections: [
+          { name: 'Reasoning Ability & Computer Aptitude', questions: 50, marks: 60 },
+          { name: 'General/Financial Awareness', questions: 50, marks: 50 },
+          { name: 'English Language', questions: 40, marks: 40 },
+          { name: 'Quantitative Aptitude', questions: 50, marks: 50 }
+        ],
+        duration: '160 minutes',
+        total: { questions: 190, marks: 200 }
+      }
+    ],
+    batchTimings: [
+      { day: 'Monday to Friday', time: '6:00 AM - 8:00 AM' },
+      { day: 'Monday to Friday', time: '6:00 PM - 8:00 PM' },
+      { day: 'Weekend Batch (Sat-Sun)', time: '9:00 AM - 1:00 PM' }
+    ],
+    curriculum: [
+      {
+        month: 1,
+        phase: 'Foundation Phase',
+        focusAreas: ['Basic Reasoning concepts', 'Quantitative Aptitude fundamentals', 'English grammar foundation'],
+        activities: ['Daily class sessions', 'Topic-wise practice', 'Banking terminology introduction', 'Speed drills'],
+        milestones: 'Build strong foundation in all three core subjects'
+      },
+      {
+        month: 2,
+        phase: 'Foundation Phase',
+        focusAreas: ['Puzzles & Seating Arrangement', 'Data Interpretation basics', 'Reading comprehension'],
+        activities: ['Weekly mock tests', 'Computer knowledge classes', 'Current affairs daily updates', 'Error analysis sessions'],
+        milestones: 'Complete 50% syllabus with 60% accuracy'
+      },
+      {
+        month: 3,
+        phase: 'Intermediate Phase',
+        focusAreas: ['Advanced reasoning problems', 'Complex arithmetic & DI', 'Vocabulary & comprehension'],
+        activities: ['Prelims pattern tests', 'Banking awareness sessions', 'Time management training', 'Doubt clearing'],
+        milestones: 'Prelims ready with 70% target accuracy'
+      },
+      {
+        month: 4,
+        phase: 'Intermediate Phase',
+        focusAreas: ['Reasoning & Computer combined', 'General & Financial Awareness', 'Advanced English'],
+        activities: ['Mains pattern mock tests', 'Static GK coverage', 'Computer knowledge mastery', 'Speed improvement drills'],
+        milestones: 'Complete 60% mains syllabus'
+      },
+      {
+        month: 5,
+        phase: 'Advanced Practice Phase',
+        focusAreas: ['Full syllabus revision', 'Weak area improvement', 'Speed & accuracy enhancement'],
+        activities: ['Daily full-length mocks', 'Current affairs comprehensive revision', 'Banking awareness mastery', 'Performance tracking'],
+        milestones: 'Mains ready with 75% accuracy'
+      },
+      {
+        month: 6,
+        phase: 'Final Sprint Phase',
+        focusAreas: ['Complete revision', 'Exam strategy', 'Mock test marathon'],
+        activities: ['Daily prelims & mains mocks', 'Quick revision sessions', 'Exam day strategies', 'Confidence building'],
+        milestones: 'Full exam readiness with confidence'
+      }
+    ]
+  },
   'adre': {
     name: 'ADRE (Assam Direct Recruitment Examination)',
     slug: 'adre',
@@ -898,7 +1015,7 @@ export default function CourseDetailPage() {
             ? {
                 backgroundImage: `url(${course.backgroundImage})`,
                 backgroundSize: 'cover',
-                backgroundPosition: (courseSlug === 'banking' || courseSlug === 'sbi-po-ibps-po') ? 'left center' : 'center',
+                backgroundPosition: (courseSlug === 'banking' || courseSlug === 'sbi-po-ibps-po' || courseSlug === 'sbi-clerk-ibps-clerk') ? 'left center' : 'center',
                 backgroundRepeat: 'no-repeat'
               }
             : undefined
@@ -910,7 +1027,7 @@ export default function CourseDetailPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6" style={course.backgroundImage ? { textShadow: '2px 2px 8px rgba(0,0,0,0.7)' } : undefined}>{course.name}</h1>
-            {(courseSlug === 'rrb-ntpc' || courseSlug === 'sbi-po-ibps-po') && (
+            {(courseSlug === 'rrb-ntpc' || courseSlug === 'sbi-po-ibps-po' || courseSlug === 'sbi-clerk-ibps-clerk') && (
               <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-teal-500 to-teal-600 text-white px-5 py-2 rounded-full text-sm font-bold shadow-lg mb-4">
                 <Wifi className="w-5 h-5" />
                 <span>Online Classes Available</span>
@@ -1011,7 +1128,7 @@ export default function CourseDetailPage() {
                 <p className="text-gray-700 leading-relaxed text-center md:text-left break-words">{course.overview}</p>
               </div>
 
-              {(courseSlug === 'rrb-ntpc' || courseSlug === 'sbi-po-ibps-po') && (
+              {(courseSlug === 'rrb-ntpc' || courseSlug === 'sbi-po-ibps-po' || courseSlug === 'sbi-clerk-ibps-clerk') && (
                 <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-4 md:p-8 border-2 border-teal-200">
                   <div className="flex items-center space-x-3 mb-6">
                     <div className="bg-teal-600 p-3 rounded-full">
@@ -1162,6 +1279,12 @@ export default function CourseDetailPage() {
                       Each stage is crucial and requires focused preparation to secure a position as a Probationary Officer in the banking sector.
                     </p>
                   )}
+                  {courseSlug === 'sbi-clerk-ibps-clerk' && (
+                    <p className="text-gray-700 mb-6 text-sm md:text-base text-center md:text-left">
+                      SBI Clerk and IBPS Clerk exams are conducted in two stages: Preliminary Examination and Mains Examination.
+                      The focus is on speed, accuracy, and comprehensive subject knowledge to secure clerical positions in banking sector.
+                    </p>
+                  )}
                   <div className="space-y-6 md:space-y-8">
                     {course.examPattern.map((pattern, index) => (
                       <div key={index} className="bg-white border-2 border-gray-200 rounded-lg overflow-hidden max-w-full">
@@ -1299,7 +1422,7 @@ export default function CourseDetailPage() {
                         <p className="text-sm text-gray-600">Exclusive sessions by industry experts</p>
                       </div>
                     </div>
-                    {(courseSlug === 'rrb-ntpc' || courseSlug === 'sbi-po-ibps-po') && (
+                    {(courseSlug === 'rrb-ntpc' || courseSlug === 'sbi-po-ibps-po' || courseSlug === 'sbi-clerk-ibps-clerk') && (
                       <div className="flex items-start space-x-3">
                         <Monitor className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
                         <div>
@@ -1322,7 +1445,7 @@ export default function CourseDetailPage() {
                         <p className="text-sm text-gray-600">Comprehensive study resources</p>
                       </div>
                     </div>
-                    {(courseSlug === 'rrb-ntpc' || courseSlug === 'sbi-po-ibps-po') && (
+                    {(courseSlug === 'rrb-ntpc' || courseSlug === 'sbi-po-ibps-po' || courseSlug === 'sbi-clerk-ibps-clerk') && (
                       <div className="flex items-start space-x-3">
                         <Video className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
                         <div>
@@ -1363,6 +1486,10 @@ export default function CourseDetailPage() {
                           'Preliminary Phase': 'bg-blue-100 border-blue-500 text-blue-700',
                           'Mains Phase': 'bg-green-100 border-green-500 text-green-700',
                           'Interview Phase': 'bg-purple-100 border-purple-500 text-purple-700',
+                          'Foundation Phase': 'bg-blue-100 border-blue-500 text-blue-700',
+                          'Intermediate Phase': 'bg-green-100 border-green-500 text-green-700',
+                          'Advanced Practice Phase': 'bg-purple-100 border-purple-500 text-purple-700',
+                          'Final Sprint Phase': 'bg-orange-100 border-orange-500 text-orange-700',
                         };
                         const colorClass = phaseColors[month.phase] || 'bg-blue-100 border-blue-500 text-blue-700';
 

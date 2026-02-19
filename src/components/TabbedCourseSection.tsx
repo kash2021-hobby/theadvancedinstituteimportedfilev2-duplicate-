@@ -61,14 +61,14 @@ const courses: Course[] = [
     hasSpecialLectures: true
   },
   {
-    name: 'Banking Clerical',
+    name: 'SBI Clerk & IBPS Clerk',
     duration: '6 Months',
     cohortStart: '10th March 2026',
-    slug: 'banking',
+    slug: 'sbi-clerk-ibps-clerk',
     category: 'Banking',
     logo: '/banking-logo.webp',
     backgroundImage: '/banking-background.webp',
-    hasOnlineSupport: false,
+    hasOnlineSupport: true,
     hasSpecialLectures: true
   },
   {
