@@ -521,7 +521,7 @@ export default function TabbedCourseSection() {
 
           <div className="hidden lg:block flex-1">
             {/* Desktop Grid View */}
-            <div className="md:grid md:grid-cols-2 gap-6">
+            <div className="md:grid md:grid-cols-2 xl:grid-cols-3 gap-6 max-w-5xl">
               {filteredCourses.map((course) => (
                 <div
                   key={course.slug}
