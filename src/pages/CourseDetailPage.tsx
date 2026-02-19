@@ -570,6 +570,163 @@ const coursesData: Record<string, CourseData> = {
       }
     ]
   },
+  'sbi-po-ibps-po': {
+    name: 'SBI PO & IBPS PO',
+    slug: 'sbi-po-ibps-po',
+    duration: '8 Months',
+    mode: 'Classroom + Online Support',
+    batchSize: '20 Students',
+    description: 'Specialized coaching program for SBI PO and IBPS PO examinations with comprehensive preparation strategy',
+    logo: '/banking-logo.webp',
+    backgroundImage: '/banking-background.webp',
+    overview: 'Our SBI PO & IBPS PO program is a specialized course designed exclusively for Probationary Officer positions in State Bank of India and other public sector banks through IBPS. This intensive program covers all three stages - Preliminary, Mains, and Interview with equal emphasis on each. The course combines classroom teaching with online resources, providing flexibility and comprehensive preparation. With expert faculty, banking-specific knowledge modules, and personality development sessions, we ensure students are fully equipped to crack these prestigious banking exams and secure leadership positions in the banking sector.',
+    highlights: [
+      'Dedicated preparation for PO level examinations',
+      'Complete coverage of Prelims, Mains, and Interview stages',
+      'Advanced reasoning and quantitative aptitude modules',
+      'Banking and financial awareness specialized classes',
+      'Descriptive English and essay writing workshops',
+      'Computer knowledge and digital banking concepts',
+      'Mock interviews and group discussion practice',
+      'Current affairs daily updates with banking focus',
+      'Online test portal with performance analytics',
+      'Live and recorded online class access'
+    ],
+    syllabus: [
+      {
+        title: 'Reasoning Ability',
+        topics: ['Puzzles & Seating Arrangement', 'Syllogism', 'Blood Relations', 'Coding-Decoding', 'Inequality', 'Data Sufficiency', 'Input-Output', 'Verbal Reasoning', 'Direction Sense', 'Ranking & Order']
+      },
+      {
+        title: 'Quantitative Aptitude',
+        topics: ['Data Interpretation', 'Number Series', 'Simplification & Approximation', 'Quadratic Equations', 'Data Sufficiency', 'Time & Work', 'Profit & Loss', 'Simple & Compound Interest', 'Percentage', 'Ratio & Proportion', 'Average', 'Mixtures & Allegations']
+      },
+      {
+        title: 'English Language',
+        topics: ['Reading Comprehension', 'Cloze Test', 'Error Spotting', 'Para Jumbles', 'Sentence Improvement', 'Fill in the Blanks', 'Vocabulary', 'Phrase Replacement', 'Sentence Completion', 'Idioms & Phrases']
+      },
+      {
+        title: 'General Awareness',
+        topics: ['Current Affairs (National & International)', 'Banking & Financial News', 'Economic Survey', 'Budget Highlights', 'Government Schemes', 'Awards & Honors', 'Sports', 'Books & Authors', 'Important Days', 'Obituaries']
+      },
+      {
+        title: 'Banking & Financial Awareness',
+        topics: ['Banking Terms & Definitions', 'RBI Functions & Monetary Policy', 'Banking Regulations & Guidelines', 'Financial Institutions (SEBI, NABARD, SIDBI)', 'Government Schemes for Financial Inclusion', 'International Banking', 'Digital Banking & Fintech', 'Insurance & Capital Markets']
+      },
+      {
+        title: 'Computer Knowledge',
+        topics: ['Computer Basics & Hardware', 'MS Office (Word, Excel, PowerPoint)', 'Internet & Networking', 'Database Management Systems', 'Computer Security & Cyber Crime', 'Digital Banking Technologies', 'Operating Systems', 'Shortcuts & Shortcuts Keys']
+      },
+      {
+        title: 'Descriptive English (Mains)',
+        topics: ['Essay Writing', 'Letter Writing (Formal & Informal)', 'Precis Writing', 'Report Writing', 'Paragraph Writing', 'Article Writing']
+      }
+    ],
+    examPattern: [
+      {
+        stage: 'Preliminary Examination',
+        sections: [
+          { name: 'English Language', questions: 30, marks: 30 },
+          { name: 'Quantitative Aptitude', questions: 35, marks: 35 },
+          { name: 'Reasoning Ability', questions: 35, marks: 35 }
+        ],
+        duration: '60 minutes',
+        total: { questions: 100, marks: 100 }
+      },
+      {
+        stage: 'Mains Examination',
+        sections: [
+          { name: 'Reasoning & Computer Aptitude', questions: 45, marks: 60 },
+          { name: 'General/Economy/Banking Awareness', questions: 40, marks: 40 },
+          { name: 'English Language', questions: 35, marks: 40 },
+          { name: 'Data Analysis & Interpretation', questions: 35, marks: 60 }
+        ],
+        duration: '180 minutes',
+        total: { questions: 155, marks: 200 }
+      },
+      {
+        stage: 'Descriptive Test (Mains)',
+        sections: [
+          { name: 'Essay Writing', questions: 1, marks: 25 },
+          { name: 'Letter Writing', questions: 1, marks: 25 }
+        ],
+        duration: '30 minutes',
+        total: { questions: 2, marks: 50 }
+      },
+      {
+        stage: 'Interview/Group Discussion',
+        sections: [
+          { name: 'Personal Interview', questions: 1, marks: 100 },
+          { name: 'Group Discussion (for some banks)', questions: 1, marks: 20 }
+        ],
+        duration: 'Varies',
+        total: { questions: 1, marks: 100 }
+      }
+    ],
+    batchTimings: [
+      { day: 'Monday to Friday', time: '6:00 AM - 8:00 AM' },
+      { day: 'Monday to Friday', time: '6:00 PM - 8:00 PM' },
+      { day: 'Weekend Batch (Sat-Sun)', time: '9:00 AM - 1:00 PM' }
+    ],
+    curriculum: [
+      {
+        month: 1,
+        phase: 'Preliminary Phase',
+        focusAreas: ['Basic Reasoning fundamentals', 'Quantitative Aptitude basics', 'English grammar foundation'],
+        activities: ['Daily class sessions', 'Banking awareness introduction', 'Weekly practice tests', 'Vocabulary building'],
+        milestones: 'Build strong foundation in all three preliminary subjects'
+      },
+      {
+        month: 2,
+        phase: 'Preliminary Phase',
+        focusAreas: ['Puzzles & Seating Arrangement', 'Data Interpretation basics', 'Reading comprehension skills'],
+        activities: ['Prelims pattern mock tests', 'Current affairs daily updates', 'Speed building exercises', 'Topic-wise assessments'],
+        milestones: 'Complete 50% preliminary syllabus with 65% accuracy'
+      },
+      {
+        month: 3,
+        phase: 'Preliminary Phase',
+        focusAreas: ['Advanced reasoning problems', 'Complex DI & arithmetic', 'English language mastery'],
+        activities: ['Full-length prelims mock tests', 'Error analysis sessions', 'Time management training', 'Banking terminology'],
+        milestones: 'Prelims exam ready with 75%+ target accuracy'
+      },
+      {
+        month: 4,
+        phase: 'Mains Phase',
+        focusAreas: ['Advanced Reasoning & Computer Aptitude', 'High-level Quantitative problems', 'Descriptive English introduction'],
+        activities: ['Mains mock tests', 'Computer knowledge classes', 'Essay writing practice', 'Banking awareness deep dive'],
+        milestones: 'Complete 40% mains syllabus with strong computer knowledge base'
+      },
+      {
+        month: 5,
+        phase: 'Mains Phase',
+        focusAreas: ['Complex problem solving & data sufficiency', 'Banking & Financial Awareness', 'Letter & precis writing'],
+        activities: ['Full-length mains mocks', 'Economic survey coverage', 'Descriptive test practice', 'Performance analysis'],
+        milestones: 'Complete 70% mains syllabus with 65% accuracy'
+      },
+      {
+        month: 6,
+        phase: 'Mains Phase',
+        focusAreas: ['Data Analysis mastery', 'General & Banking Awareness revision', 'Descriptive paper perfection'],
+        activities: ['Daily mains mock tests', 'Current affairs comprehensive revision', 'Writing skills enhancement', 'Weak area focus'],
+        milestones: 'Mains ready with 75%+ accuracy and strong descriptive skills'
+      },
+      {
+        month: 7,
+        phase: 'Interview Phase',
+        focusAreas: ['Interview skills development', 'Group discussion practice', 'Personality enhancement'],
+        activities: ['Mock interviews', 'GD sessions', 'Banking sector knowledge', 'Current affairs mastery'],
+        milestones: 'Interview-ready with strong communication and banking knowledge'
+      },
+      {
+        month: 8,
+        phase: 'Interview Phase',
+        focusAreas: ['Final revision all stages', 'Confidence building', 'Exam strategy refinement'],
+        activities: ['Final mock tests all stages', 'Personal interview practice', 'Rapid revision sessions', 'Stress management'],
+        milestones: 'Complete preparation for all three stages with confidence'
+      }
+    ]
+  },
   'adre': {
     name: 'ADRE (Assam Direct Recruitment Examination)',
     slug: 'adre',
@@ -741,7 +898,7 @@ export default function CourseDetailPage() {
             ? {
                 backgroundImage: `url(${course.backgroundImage})`,
                 backgroundSize: 'cover',
-                backgroundPosition: courseSlug === 'banking' ? 'left center' : 'center',
+                backgroundPosition: (courseSlug === 'banking' || courseSlug === 'sbi-po-ibps-po') ? 'left center' : 'center',
                 backgroundRepeat: 'no-repeat'
               }
             : undefined
@@ -753,7 +910,7 @@ export default function CourseDetailPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6" style={course.backgroundImage ? { textShadow: '2px 2px 8px rgba(0,0,0,0.7)' } : undefined}>{course.name}</h1>
-            {courseSlug === 'rrb-ntpc' && (
+            {(courseSlug === 'rrb-ntpc' || courseSlug === 'sbi-po-ibps-po') && (
               <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-teal-500 to-teal-600 text-white px-5 py-2 rounded-full text-sm font-bold shadow-lg mb-4">
                 <Wifi className="w-5 h-5" />
                 <span>Online Classes Available</span>
@@ -854,7 +1011,7 @@ export default function CourseDetailPage() {
                 <p className="text-gray-700 leading-relaxed text-center md:text-left break-words">{course.overview}</p>
               </div>
 
-              {courseSlug === 'rrb-ntpc' && (
+              {(courseSlug === 'rrb-ntpc' || courseSlug === 'sbi-po-ibps-po') && (
                 <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-4 md:p-8 border-2 border-teal-200">
                   <div className="flex items-center space-x-3 mb-6">
                     <div className="bg-teal-600 p-3 rounded-full">
@@ -999,6 +1156,12 @@ export default function CourseDetailPage() {
                       The preliminary exam is a qualifying exam, while mains includes both objective and descriptive papers.
                     </p>
                   )}
+                  {courseSlug === 'sbi-po-ibps-po' && (
+                    <p className="text-gray-700 mb-6 text-sm md:text-base text-center md:text-left">
+                      SBI PO and IBPS PO exams are conducted in three stages: Preliminary Examination, Mains Examination (including Descriptive Test), and Personal Interview/Group Discussion.
+                      Each stage is crucial and requires focused preparation to secure a position as a Probationary Officer in the banking sector.
+                    </p>
+                  )}
                   <div className="space-y-6 md:space-y-8">
                     {course.examPattern.map((pattern, index) => (
                       <div key={index} className="bg-white border-2 border-gray-200 rounded-lg overflow-hidden max-w-full">
@@ -1136,7 +1299,7 @@ export default function CourseDetailPage() {
                         <p className="text-sm text-gray-600">Exclusive sessions by industry experts</p>
                       </div>
                     </div>
-                    {courseSlug === 'rrb-ntpc' && (
+                    {(courseSlug === 'rrb-ntpc' || courseSlug === 'sbi-po-ibps-po') && (
                       <div className="flex items-start space-x-3">
                         <Monitor className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
                         <div>
@@ -1159,7 +1322,7 @@ export default function CourseDetailPage() {
                         <p className="text-sm text-gray-600">Comprehensive study resources</p>
                       </div>
                     </div>
-                    {courseSlug === 'rrb-ntpc' && (
+                    {(courseSlug === 'rrb-ntpc' || courseSlug === 'sbi-po-ibps-po') && (
                       <div className="flex items-start space-x-3">
                         <Video className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
                         <div>
