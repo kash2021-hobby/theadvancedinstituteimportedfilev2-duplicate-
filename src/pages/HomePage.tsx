@@ -302,7 +302,7 @@ export default function HomePage() {
         <div className="absolute top-20 right-10 w-72 h-72 bg-ocean-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-black text-gradient-blue mb-6 tracking-tight">
+            <h2 className="text-4xl md:text-5xl font-black text-gradient-blue mb-6 tracking-tight leading-tight pb-2">
               How Our Program Works
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-ocean-500 mx-auto mb-6 rounded-full"></div>
