@@ -394,7 +394,7 @@ export default function HomePage() {
               }
             ].map((faculty, i) => {
               return (
-                <div key={i} className="bg-white rounded-3xl overflow-hidden shadow-blue-lg hover:shadow-blue-xl card-hover-lift border-2 border-primary-100 cursor-pointer group tilt-3d" onClick={() => setSelectedFaculty(i)}>
+                <div key={i} className="bg-white rounded-3xl overflow-hidden shadow-blue-lg hover:shadow-blue-xl card-hover-lift border-2 border-primary-100 cursor-pointer group tilt-3d flex flex-col" onClick={() => setSelectedFaculty(i)}>
                   <div className="h-64 bg-gradient-to-br from-primary-100 to-ocean-200 flex items-center justify-center relative overflow-hidden">
                     <img
                       src={faculty.image}
@@ -406,14 +406,14 @@ export default function HomePage() {
                       {faculty.experience}
                     </div>
                   </div>
-                  <div className="p-8">
+                  <div className="p-8 flex flex-col flex-grow">
                     <h3 className="font-black text-2xl text-gray-900 mb-2">{faculty.name}</h3>
                     <p className="text-primary-600 font-bold mb-3 text-lg">{faculty.qualification}</p>
                     <p className="text-sm text-gray-500 font-semibold mb-2 uppercase tracking-wide">Specialization</p>
-                    <p className="text-gray-800 text-base leading-relaxed mb-6 font-medium">
+                    <p className="text-gray-800 text-base leading-relaxed mb-6 font-medium flex-grow">
                       {faculty.specialization}
                     </p>
-                    <button className="w-full bg-gradient-to-r from-primary-500 to-ocean-500 text-white py-3 rounded-xl font-bold hover:from-primary-600 hover:to-ocean-600 transition-all text-base shadow-blue-md hover:shadow-blue-lg btn-pulse">
+                    <button className="w-full bg-gradient-to-r from-primary-500 to-ocean-500 text-white py-3 rounded-xl font-bold hover:from-primary-600 hover:to-ocean-600 transition-all text-base shadow-blue-md hover:shadow-blue-lg btn-pulse mt-auto">
                       View Full Profile
                     </button>
                   </div>
